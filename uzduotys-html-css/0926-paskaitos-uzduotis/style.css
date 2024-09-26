@@ -1,0 +1,81 @@
+/* Resets */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin:0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+
+
+/* Layout */
+main {
+    font-family: "Open-Sans", Arial, Helvetica, sans-serif;
+    margin: 2rem auto;
+    width: 80dvw;
+    max-width: 1500px;
+}
+
+main h1 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    display: flex;
+    gap: 1rem;
+}
+
+article {
+    max-width: 40ch;
+    border: 0.15rem solid rgb(214, 213, 230);
+    border-radius: 0.8rem;
+    padding: 1rem;
+    flex: 1 1 0px;
+}
+
+article h1, article h2 {
+    color: black;
+}
+
+article h2 {
+    margin-bottom: 0.2rem;
+    font-size: 1.3rem;
+}
+
+article p {
+    font-weight: 600;
+    font-size: 1rem; 
+    color: rgb(114, 114, 114);  
+}
+
+article div {
+    background-color: #ffc9b8;
+    border-radius: 0.3rem;
+    font-size: large;
+    padding: 0.5rem;
+    aspect-ratio: 1/1;
+    max-width: 3rem;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+article div i {
+    vertical-align: middle;
+    color: #a75840;
+}

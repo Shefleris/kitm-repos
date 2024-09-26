@@ -1,0 +1,124 @@
+/* Variables */
+:root {
+    --main-color:#3d92e7;
+    --secondary-color:#919191;
+}
+
+/* Typography */
+h1 {
+    margin: 0;
+    font-size: medium;
+}
+
+.left-container h2{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.right-container h2 {
+    font-size: 2rem;
+    color: var(--main-color);
+    margin: 0;
+}
+
+.right-container p {
+    color: var(--secondary-color);
+    margin: 0 0 2rem 0;
+}
+
+label {
+    color: var(--secondary-color);
+}
+
+ul a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+section div ul:first-child a {
+    color: var(--main-color);
+    font-style: normal;
+}
+
+/* Layout */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.main-container {
+    height: 100vh;
+    background: linear-gradient(145deg, var(--main-color), #a401d6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    max-width: max(50vw, 900px);
+}
+
+.left-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--main-color);
+    border-radius: 10px 0 0 10px;
+    flex: 1;
+    color: #ffffff;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+}
+
+.right-container {
+    background-color: #ffffff;
+    border-radius: 0 10px 10px 0;
+    flex: 1;
+    padding: 3rem
+}
+
+#user-name,
+#password {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+input[type="checkbox"] {
+    margin-bottom: 1rem;
+}
+
+input[type="checkbox"]:checked {
+    background-color: var(--main-color);
+}
+
+button {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 3rem;
+    color: #ffffff;
+    font-weight:800;
+    border: 0;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+}
+
+section > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+ul {
+    display: inline-flex;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    gap: 10px;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
