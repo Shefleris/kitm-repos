@@ -56,16 +56,14 @@ header {
 
 header ul li {
     list-style: none;
+    margin:0 0.5rem;
+    font-size: 1.188rem;
+    font-weight: 800;
 }
 
 /* Main typography */
 .container {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
-}
-
-header ul li {
-    font-size: 1.188rem;
-    font-weight: 800;
 }
 
 main {
@@ -125,7 +123,7 @@ footer {
 .container {
     display: flex;
     flex-direction: column;
-    height: 100dvh;
+    height: 100lvh;
 }
 
 /* 
@@ -139,11 +137,17 @@ header ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 header ul li {
     justify-content: space-around;
     align-items: center;
+    margin: 0 0.5em;
+}
+
+header img {
+    min-width: 3rem;
 }
 
 /* 
