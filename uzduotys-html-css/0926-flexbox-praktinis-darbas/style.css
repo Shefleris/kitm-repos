@@ -171,6 +171,7 @@ main > section {
     flex:1 ;
     justify-content: space-between;
     gap: 2em;
+    flex-wrap: wrap;
 }
 
 main > section article,
