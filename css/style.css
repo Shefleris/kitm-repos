@@ -52,6 +52,27 @@ header > p {
     margin-bottom: 43px;
 }
 
+main > section:nth-child(2) > h2 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 47px;
+    text-align: center;
+} 
+
+main > section:nth-child(2) > p {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 32px;
+    text-align: center;
+} 
+
+main > section:nth-child(2) > ul li {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24.59px;
+    text-align: center;
+}
+
 /* Interactive elements */
 .searchfield {
     background-color: white;
@@ -74,8 +95,6 @@ header > p {
     width: 90.76px;
     color: var(--colour-white)
 }
-
-
 
 /* Layout */
 .container-body {
@@ -188,4 +207,42 @@ main > section:nth-child(1) > div > article {
     flex-direction: column;
     align-items: center;
     width: 335px;
+}
+
+/* Main section 2 (Test management list)*/
+main > section:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--primary-colour);
+    color: var(--colour-white);
+    padding: 50px 20px 84px;
+}
+
+main > section:nth-child(2) > div > h2 {
+    margin-bottom: 12px;
+}
+
+main > section:nth-child(2) > div {
+    margin-bottom: 60px;
+}
+
+main > section:nth-child(2) > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0;
+    gap:58px;
+}
+
+main > section:nth-child(2) > ul li {
+    list-style: none;
+    padding: 0;
+    width: 183px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
