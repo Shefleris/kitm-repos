@@ -29,3 +29,83 @@ input, button, textarea, select {
     --secondary-colour:#F4F5F7;
     --colour-black:#000000;
 }
+
+/* Typography */
+.container-body {
+    font-family: "Manrope", Arial, Helvetica, sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--colour-white);
+}
+
+/* Layout */
+.container-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-header {
+    background-image: url(../assets/985cabb6920eaaeecfea44bd6b5ef5d8.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    height: 601px;
+}
+
+@media (min-width:600px){
+    .container-header {
+        height:647px
+    }
+}
+
+@media (min-width:1100px){
+    .container-header {
+        height:754px
+    }
+}
+
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:35px 0 0 0;
+    padding:0 1rem;
+}
+
+nav > ul > li:last-of-type{
+    display:block;
+    padding: 10px 20px;
+    background-color: var(--primary-colour);
+    border-radius:5px; 
+}
+
+@media (max-width:600px) {
+    nav > ul > li {
+        display: none;
+    }
+}
+
+@media (min-width:600px) {
+    nav ul {
+        display: flex;
+        list-style: none;
+        justify-content: right;
+    } 
+}
+
+nav > button {
+    border:none;
+    font-size: 1.5rem;
+}
+
+@media (min-width:600px) {
+    nav > button {
+        display: none;
+    }
+}
