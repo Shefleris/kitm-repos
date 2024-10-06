@@ -235,7 +235,7 @@ main > section:nth-child(2) > ul {
     align-items: center;
     text-align: center;
     padding: 0;
-    gap:58px;
+    gap:28px;
 }
 
 main > section:nth-child(2) > ul li {
