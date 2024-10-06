@@ -40,6 +40,19 @@ nav ul li a {
     color: var(--colour-white);
 }
 
+header > h1 {
+    font-size: 42px;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+header > p {
+    font-size: 12px;
+    font-weight: 400;
+    margin-bottom: 43px;
+}
+
+
 /* Layout */
 .container-body {
     display: flex;
@@ -68,6 +81,28 @@ nav ul li a {
     }
 }
 
+/* Interactive elements */
+.searchfield {
+    background-color: white;
+    height: 59.85px;
+    border-radius: 8px;
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+}
+
+.searchfield input {
+    border: none;
+}
+
+.searchfield button {
+    background-color: var(--primary-colour);
+    border:none;
+    border-radius: 8px;
+    height: 50.01px;
+    width: 90.76px;
+    color: var(--colour-white)
+}
 
 /* Navigation bar */
 nav {
@@ -108,4 +143,15 @@ nav > button {
     nav > button {
         display: none;
     }
+}
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    padding: 0 1rem;
 }
