@@ -354,7 +354,14 @@ main > section:nth-child(2) > ul {
     align-items: center;
     text-align: center;
     padding: 0;
-    gap:28px;
+    gap:116px;
+}
+
+@media (min-width:700px) {
+    main > section:nth-child(2) > ul {
+        flex-direction: row;
+        gap: 30px;
+    }
 }
 
 main > section:nth-child(2) > ul li {
@@ -364,7 +371,24 @@ main > section:nth-child(2) > ul li {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
+
+main > section:nth-child(2) > ul li:not(:last-child)::after{
+    content: url(/assets/other/CaretCircleDoubleRight.svg);
+    position: absolute;
+    bottom: -80px;
+}
+
+@media (min-width:700px){
+    main > section:nth-child(2) > ul li:not(:last-child)::after{
+        content: url(/assets/other/CaretCircleDoubleRight.svg);
+        transform: rotate(-90deg);
+        position: static;
+        
+    }
+}
+
 
 /* Main section 3 */
 main > section:nth-child(3) {
