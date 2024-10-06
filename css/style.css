@@ -225,7 +225,7 @@ main > section:nth-child(5) > a {
     height: 601px;
 }
 
-@media (min-width:600px){
+@media (min-width:700px){
     .container-header {
         height:647px
     }
@@ -253,17 +253,23 @@ nav > ul > li:last-of-type{
     border-radius:5px; 
 }
 
-@media (max-width:600px) {
+@media (max-width:700px) {
     nav > ul > li {
         display: none;
     }
 }
 
-@media (min-width:600px) {
-    nav ul {
+@media (min-width:700px) {
+    nav {
         display: flex;
-        list-style: none;
         justify-content: right;
+    }
+    
+    nav ul {
+        list-style: none;
+        display: flex;
+        align-items:center;
+        gap:40px;
     } 
 }
 
@@ -272,7 +278,7 @@ nav > button {
     font-size: 1.5rem;
 }
 
-@media (min-width:600px) {
+@media (min-width:700px) {
     nav > button {
         display: none;
     }
