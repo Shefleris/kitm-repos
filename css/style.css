@@ -583,7 +583,16 @@ footer > div:first-child > ul{
     flex-direction: column;
 }
 
-footer > div > ul {
+@media (min-width:1024px){
+    footer > div:last-child {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+    }
+}
+
+footer > div:last-child > ul {
     display: flex;
     gap: 0.5rem;
 }
