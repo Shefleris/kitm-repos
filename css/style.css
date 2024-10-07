@@ -226,6 +226,7 @@ main > section:nth-child(5) > a {
     background-position: center;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 601px;
 }
 
@@ -295,10 +296,24 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 100%;
     padding: 0 1rem;
+    flex: 1;
 }
+
+header > div {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+header > div > h1 {
+    margin-bottom: 30px;
+}
+
+header > div > p {
+    margin-bottom: 43px;
+}
+
 
 /* Main section 1 (Quality and Process Management)*/
 main > section:nth-child(1) {
