@@ -216,7 +216,7 @@ main > section:nth-child(5) > a {
 }
 
 .container-header {
-    background-image: url(../assets/985cabb6920eaaeecfea44bd6b5ef5d8.png);
+    background-image: linear-gradient(115deg, #d1d1d1ad, #d1d1d1ad), url(../assets/985cabb6920eaaeecfea44bd6b5ef5d8.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -227,7 +227,8 @@ main > section:nth-child(5) > a {
 
 @media (min-width:700px){
     .container-header {
-        height:647px
+        height:647px;
+        background-image: url(../assets/985cabb6920eaaeecfea44bd6b5ef5d8.png);
     }
 }
 
@@ -385,7 +386,7 @@ main > section:nth-child(2) > ul li:not(:last-child)::after{
         content: url(/assets/other/CaretCircleDoubleRight.svg);
         transform: rotate(-90deg);
         position: static;
-        
+
     }
 }
 
