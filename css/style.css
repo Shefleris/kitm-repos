@@ -170,10 +170,12 @@ footer > div > ul > li {
 .searchfield {
     background-color: white;
     height: 59.85px;
+    width: 100%;
     border-radius: 8px;
     padding: 0.3rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .searchfield input {
