@@ -551,14 +551,14 @@ header > p {
 }
 
 .section-two  > ul li:not(:last-child)::after{
-    content: url(./assets/other/CaretCircleDoubleRight.svg);
+    content: url(../assets/other/CaretCircleDoubleRight.svg);
     position: absolute;
     bottom: -80px;
 }
 
 @media (min-width:700px){
     .section-two  > ul li:not(:last-child)::after{
-        content: url(./assets/other/CaretCircleDoubleRight.svg);
+        content: url(../assets/other/CaretCircleDoubleRight.svg);
         transform: rotate(-90deg);
         position: static;
 
