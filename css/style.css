@@ -53,14 +53,14 @@ header > h1 {
     margin-bottom: 30px;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     header > h1 {
         font-size: 56px;
         line-height: 73.5px;
     }
 }
 
-@media (min-width:1440px){
+@media (min-width:1400px){
     header > h1 {
         font-size: 64px;
         line-height: 82px;
@@ -73,7 +73,7 @@ header > p {
     margin-bottom: 43px;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     header > p {
         font-size: 16px;
         line-height: 28px;
@@ -81,7 +81,7 @@ header > p {
     }
 }
 
-@media (min-width:1440px){
+@media (min-width:1400px){
     header > p {
         font-size: 20px;
         line-height: 36px;
@@ -95,7 +95,7 @@ header > p {
     text-align: center;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .section-one > h2 {
         font-size: 36px;
         line-height: 49.18px;
@@ -110,7 +110,7 @@ header > p {
     text-align: center;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .section-one > p {
         font-size: 24px;
         line-height: 39.5px;
@@ -140,7 +140,7 @@ header > p {
     text-align: center;
 } 
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .section-two h2 {
         font-size: 48px;
         line-height: 64px;
@@ -154,7 +154,7 @@ header > p {
     text-align: center;
 } 
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .section-two p {
         font-size: 18px;
         line-height: 32px;
@@ -168,14 +168,14 @@ header > p {
     text-align: center;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .section-two ul li {
         font-size: 14px;
         line-height: 21.5px;
     }
 }
 
-@media (min-width:1440px){
+@media (min-width:1400px){
     .section-two ul li {
         font-size: 18px;
         line-height: 31px; 
@@ -189,14 +189,14 @@ header > p {
     color: var(--colour-similar-black);
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .section-three article h2{
         font-size: 58px;
         line-height: 59.5px;
     }
 }
 
-@media (min-width:1440px){
+@media (min-width:1400px){
     .section-three article h2{
         font-size: 64px;
         line-height: 76px;
@@ -211,7 +211,7 @@ header > p {
 }
 
 
-@media (min-width:1440px){
+@media (min-width:1400px){
     .section-three article p {
         font-size: 16px;
         line-height: 32px;
@@ -225,7 +225,7 @@ header > p {
 }
 
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .section-four > h2 {
         font-size: 48px;
         line-height: 64px;
@@ -238,7 +238,7 @@ header > p {
     font-weight: 500;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .section-four > p {
         font-size: 18px;
         line-height: 32px;
@@ -251,7 +251,7 @@ header > p {
     font-weight: 800;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .section-five > h2{
         font-size: 48px;
         line-height: 32px;
@@ -264,7 +264,7 @@ header > p {
     font-weight: 500;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .section-five > p{
         font-size: 18px;
         line-height: 32px;
@@ -363,7 +363,7 @@ footer > div > ul > li {
     width: 100%;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .container-nav-header {
         height:647px;
         background-image: url(../assets/985cabb6920eaaeecfea44bd6b5ef5d8.png);
@@ -379,7 +379,7 @@ footer > div > ul > li {
 .container-nav-header > div,
 main section,
 footer {
-    max-width: 1440px;
+    max-width: 1400px;
 }
 
 main,
@@ -460,7 +460,7 @@ header > p {
     margin-bottom: 43px;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .container-nav-header div:nth-child(2){
         justify-content: left;
     }
@@ -551,14 +551,14 @@ header > p {
 }
 
 .section-two  > ul li:not(:last-child)::after{
-    content: url(/assets/other/CaretCircleDoubleRight.svg);
+    content: url(./assets/other/CaretCircleDoubleRight.svg);
     position: absolute;
     bottom: -80px;
 }
 
 @media (min-width:700px){
     .section-two  > ul li:not(:last-child)::after{
-        content: url(/assets/other/CaretCircleDoubleRight.svg);
+        content: url(./assets/other/CaretCircleDoubleRight.svg);
         transform: rotate(-90deg);
         position: static;
 
@@ -577,17 +577,18 @@ header > p {
 }
 .section-three > article {
     display: grid;
-    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat( auto-fit, minmax(400px, 1fr));
     gap: 30px;
 }
-@media (min-width:1024px){
+
+@media (min-width:1000px){
     .section-three > article {
         gap:56px;
         text-align: left;
     }
 }
 
-@media (min-width:1440px){
+@media (min-width:1400px){
     .section-three > article {
         gap:85px;
     }
@@ -604,7 +605,7 @@ header > p {
     aspect-ratio: 1/1;
 }
 
-@media (min-width:800px) {
+@media (min-width:1000px) {
     .section-three > article:nth-child(1) > figure{
         grid-column: 2;
         grid-row: 1;
@@ -685,7 +686,7 @@ header > p {
     display: none;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     .container-logos{
       grid-template-columns: repeat(5, 1fr);
       height: 336px;
@@ -782,7 +783,7 @@ footer > div:first-child > ul{
     flex-direction: column;
 }
 
-@media (min-width:1024px){
+@media (min-width:1000px){
     footer > div:last-child {
         display: flex;
         flex-wrap: wrap;
