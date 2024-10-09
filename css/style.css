@@ -332,6 +332,12 @@ footer > div > ul > li {
     gap: 10px;
 }
 
+@media (min-width:1000px){
+    .section-three > article div a {
+        width: 160px;
+    }
+}
+
 .section-five > a {
     background-color: var(--primary-colour);
     color: var(--colour-white);
