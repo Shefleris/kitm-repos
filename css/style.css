@@ -32,7 +32,7 @@ input, button, textarea, select {
     --colour-grey:#808080;
 }
 
-/* Typography */
+/* Typography*/
 .container-body {
     font-family: "Manrope", Arial, Helvetica, sans-serif;
 }
@@ -54,14 +54,14 @@ header > p {
     margin-bottom: 43px;
 }
 
-main > section:nth-child(1) > h2 {
+.section-one > h2 {
     font-size: 24px;
     font-weight: 800;
     line-height: 32.78px;
     text-align: center;
 }
 
-main > section:nth-child(1) > p {
+.section-one > p {
     font-size: 12px;
     font-weight: 400;
     line-height: 22px;
@@ -69,14 +69,14 @@ main > section:nth-child(1) > p {
     text-align: center;
 }
 
-main > section:nth-child(1) > div > article > h3 {
+.section-one > div > article > h3 {
     font-size: 24px;
     font-weight: 800;
     line-height: 32.78px;
     text-align: center;
 }
 
-main > section:nth-child(1) > div > article > p {
+.section-one > div > article > p {
     font-size: 18px;
     font-weight: 400;
     line-height: 28px;
@@ -84,60 +84,60 @@ main > section:nth-child(1) > div > article > p {
     text-align: center;
 }
 
-main > section:nth-child(2) h2 {
+.section-two h2 {
     font-size: 36px;
     font-weight: 800;
     line-height: 47px;
     text-align: center;
 } 
 
-main > section:nth-child(2) p {
+.section-two p {
     font-size: 14px;
     font-weight: 400;
     line-height: 32px;
     text-align: center;
 } 
 
-main > section:nth-child(2) ul li {
+.section-two ul li {
     font-size: 18px;
     font-weight: 700;
     line-height: 24.59px;
     text-align: center;
 }
 
-main > section:nth-child(3) > article h2 {
+.section-three > article h2 {
     font-size: 36px;
     font-weight: 700;
     line-height: 41.5px;
     color: var(--colour-similar-black);
 }
 
-main > section:nth-child(3) > article p {
+.section-three > article p {
     font-size: 14px;
     font-weight: 400;
     line-height: 28.5px;
     color: var(--colour-grey);
 }
 
-main > section:nth-child(4) > h2 {
+.section-four > h2 {
     font-size: 36px;
     line-height: 41.5px;
     font-weight: 700;
 }
 
-main > section:nth-child(4) > p {
+.section-four > p {
     font-size: 14px;
     line-height: 32px;
     font-weight: 500;
 }
 
-main > section:nth-child(5) > h2{
+.section-five > h2{
     font-size: 36px;
     line-height: 32px;
     font-weight: 800;
 }
 
-main > section:nth-child(5) > p{
+.section-five > p{
     font-size: 14px;
     line-height: 25px;
     font-weight: 500;
@@ -193,7 +193,7 @@ footer > div > ul > li {
     color: var(--colour-white)
 }
 
-main > section:nth-child(3) > article div a {
+.section-three > article div a {
     display: block;
     background-color: var(--primary-colour);
     color: var(--colour-white);
@@ -204,7 +204,7 @@ main > section:nth-child(3) > article div a {
     gap: 10px;
 }
 
-main > section:nth-child(5) > a {
+.section-five > a {
     background-color: var(--primary-colour);
     color: var(--colour-white);
     padding: 11px 20.5px;
@@ -226,8 +226,13 @@ main > section:nth-child(5) > a {
     background-position: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    align-items: center;
     height: 601px;
+    width: 100%;
+}
+
+.container-nav-header > div {
+    width: 100%;
 }
 
 @media (min-width:1024px){
@@ -241,6 +246,19 @@ main > section:nth-child(5) > a {
     .container-nav-header {
         height:754px
     }
+}
+
+.container-nav-header > div,
+main section,
+footer {
+    max-width: 1440px;
+}
+
+main,
+main > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Navigation bar */
@@ -291,43 +309,42 @@ nav > button {
 }
 
 /* Header */
-header {
-    display: flex;
-    justify-content: center;
+.container-nav-header div:nth-child(2){
+    display:flex;
     align-items: center;
+    justify-content: center;
+    flex:1;
     padding: 0 1rem;
-    flex: 1;
 }
 
-header > div {
+header {
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
 }
 
-header > div > h1 {
+header > h1 {
     margin-bottom: 30px;
 }
 
-header > div > p {
+header > p {
     margin-bottom: 43px;
 }
 
 @media (min-width:1024px){
-    header {
+    .container-nav-header div:nth-child(2){
         justify-content: left;
     }
 
-    header > div {
+    header {
         text-align: left;
-        align-items: left;
-        margin-left: 6vw;
         max-width: 665px;
     }
 }
 
 /* Main section 1 (Quality and Process Management)*/
-main > section:nth-child(1) {
+.section-one {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -336,23 +353,20 @@ main > section:nth-child(1) {
     padding-bottom: 90px;
 }
 
-main > section:nth-child(1) > h2 {
+.section-one > h2 {
     margin-bottom: 15px;
 }
-
-main > section:nth-child(1) > p {
+.section-one > p {
     margin-bottom: 40px;
 }
-
-main > section:nth-child(1) > div {
+.section-one > div {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 80px;
 }
-
-main > section:nth-child(1) > div > article {
+.section-one > div > article {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -360,25 +374,28 @@ main > section:nth-child(1) > div > article {
 }
 
 /* Main section 2 (Test management list)*/
-main > section:nth-child(2) {
+.bg-primary {
+    background-color: var(--primary-colour);
+    color: var(--colour-white);
+    width: 100%;
+}
+
+.section-two {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: var(--primary-colour);
-    color: var(--colour-white);
     padding: 50px 20px 84px;
 }
 
-main > section:nth-child(2) > div > h2 {
+.section-two  > div > h2 {
     margin-bottom: 12px;
 }
 
-main > section:nth-child(2) > div {
+.section-two  > div {
     margin-bottom: 60px;
 }
-
-main > section:nth-child(2) > ul {
+.section-two > ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -389,13 +406,13 @@ main > section:nth-child(2) > ul {
 }
 
 @media (min-width:700px) {
-    main > section:nth-child(2) > ul {
+    .section-two > ul {
         flex-direction: row;
         gap: 30px;
     }
 }
 
-main > section:nth-child(2) > ul li {
+.section-two > ul li {
     list-style: none;
     padding: 0;
     width: 183px;
@@ -405,14 +422,14 @@ main > section:nth-child(2) > ul li {
     position: relative;
 }
 
-main > section:nth-child(2) > ul li:not(:last-child)::after{
+.section-two  > ul li:not(:last-child)::after{
     content: url(/assets/other/CaretCircleDoubleRight.svg);
     position: absolute;
     bottom: -80px;
 }
 
 @media (min-width:700px){
-    main > section:nth-child(2) > ul li:not(:last-child)::after{
+    .section-two  > ul li:not(:last-child)::after{
         content: url(/assets/other/CaretCircleDoubleRight.svg);
         transform: rotate(-90deg);
         position: static;
@@ -422,7 +439,7 @@ main > section:nth-child(2) > ul li:not(:last-child)::after{
 
 
 /* Main section 3 */
-main > section:nth-child(3) {
+.section-three {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -430,42 +447,44 @@ main > section:nth-child(3) {
     padding: 90px 20px 80px;
     gap: 60px;
 }
-
-main > section:nth-child(3) > article {
+.section-three > article {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
 }
-
-main > section:nth-child(3) > article > div > img {
+.section-three > article > div > img {
     border-radius: 8px;
     min-height: 100%;
     object-fit: cover;
 }
 
-main > section:nth-child(3) > article h2 {
+.section-three > article h2 {
     margin-bottom: 20px;
 }
 
-main > section:nth-child(3) > article p {
+.section-three > article p {
     margin-bottom: 40px;
 }
 
 /* Main section 4 (References) */
-main > section:nth-child(4) {
+.bg-secondary{
+    background-color: var(--secondary-colour);
+    width: 100%;
+}
+
+.section-four {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-color: var(--secondary-colour);
     padding: 40px 21px;
 }
 
-main > section:nth-child(4) > h2 {
+.section-four > h2 {
     margin-bottom: 14px;
 }
 
-main > section:nth-child(4) > p {
+.section-four > p {
     margin-bottom: 40px;
 }
 
@@ -541,10 +560,9 @@ main > section:nth-child(4) > p {
          grid-row: 3 / span 2;
      }
  }
- 
 
 /* Main section 5 (Contact us)*/
-main > section:nth-child(5) {
+.section-five {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -552,28 +570,34 @@ main > section:nth-child(5) {
     padding: 90px 20px 82px;
 }
 
-main > section:nth-child(5) > img{
+.section-five > img{
     margin-bottom: 20px;
 }
 
-main > section:nth-child(5) > h2{
+.section-five > h2{
     margin-bottom: 12px;
 }
 
-main > section:nth-child(5) > p{
+.section-five > p{
     margin-bottom: 20px;
 }
 
 
 /* Footer */
+.container-body > div:last-child{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 footer {
-    background-color: var(--primary-colour);
+    width: 100%;
     padding: 80px 20px;
 }
 
 footer > div:first-child {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)) ;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 49px;
     margin-bottom: 49px;
 }
