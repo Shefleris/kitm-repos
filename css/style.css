@@ -14,7 +14,6 @@ body {
 
 img, picture, video, canvas, svg {
     display: block;
-    max-width: 100%;
 }
 
 input, button, textarea, select {
@@ -577,31 +576,61 @@ header > p {
     gap: 60px;
 }
 .section-three > article {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr));
     gap: 30px;
 }
 @media (min-width:1024px){
     .section-three > article {
-        flex-wrap: nowrap;
-    }
-    .section-three > article:nth-child(2){
-        flex-direction: row-reverse;
+        gap:56px;
+        text-align: left;
     }
 }
+
+@media (min-width:1440px){
+    .section-three > article {
+        gap:85px;
+    }
+}
+
 .section-three > article > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-three > article > figure {
+    max-height: 100%;
     aspect-ratio: 1/1;
-    flex: 1;
 }
 
-.section-three > article > div:last-child {
+@media (min-width:800px) {
+    .section-three > article:nth-child(1) > figure{
+        grid-column: 2;
+        grid-row: 1;
+    }
+    
+    .section-three > article:nth-child(1) > div{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .section-three > article:nth-child(2) > figure{
+        grid-column: 1;
+        grid-row: 1;
+    }
+    
+    .section-three > article:nth-child(2) > div{
+        grid-column: 2;
+        grid-row: 1;
+    }
+}
+
+.section-three > article > figure > img {
     height: 100%;
-}
-
-.section-three > article > div > img {
-    border-radius: 8px;
-    min-height: 100%;
+    max-width: 100%;
     object-fit: cover;
+    border-radius: 8px;
 }
 
 .section-three > article h2 {
