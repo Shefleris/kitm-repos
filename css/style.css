@@ -59,7 +59,7 @@ nav a {
 header > h1 {
     font-size: 42px;
     font-weight: 800;
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 @media (min-width:800px){
@@ -79,7 +79,7 @@ header > h1 {
 header > p {
     font-size: 12px;
     font-weight: 400;
-    margin-bottom: 43px;
+    margin-bottom: 2.688rem;
 }
 
 @media (min-width:800px){
@@ -311,7 +311,7 @@ footer > div > ul > li {
 .searchfield input {
     border: none;
     width: 100%;
-    margin-right: 10px;
+    margin-right: 0.625rem;
 }
 
 .searchfield button {
@@ -330,7 +330,7 @@ footer > div > ul > li {
     text-align: center;
     display: block;
     width: 100%;
-    padding:12px;
+    padding:0.75rem;
     border-radius: 8px;
     gap: 10px;
 }
@@ -344,7 +344,7 @@ footer > div > ul > li {
 .section-five > a {
     background-color: var(--primary-colour);
     color: var(--colour-white);
-    padding: 11px 20.5px;
+    padding: 0.688rem 1.281rem;
     gap:10px;
     text-decoration: none;
     border-radius:8px;    
@@ -404,14 +404,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top:35px;
+    margin-top:2.188rem;
     padding:0 1rem;
 }
 
 nav > a {
     background-color: var(--primary-colour);
     display:block;
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     border-radius:5px; 
 }
 
@@ -423,7 +423,7 @@ nav > a {
 
     nav .menu-icon {
         display: block;
-        padding: 28px 20px;
+        padding: 1.75rem 1.25rem;
         position: relative;
         user-select: none;
     }
@@ -534,11 +534,11 @@ header {
 }
 
 header > h1 {
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 header > p {
-    margin-bottom: 43px;
+    margin-bottom: 2.688rem;
 }
 
 @media (min-width:800px){
@@ -558,15 +558,15 @@ header > p {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-top: 60px;
-    padding-bottom: 90px;
+    padding-top: 3.75rem;
+    padding-bottom: 5.625rem;
 }
 
 .section-one > h2 {
-    margin-bottom: 15px;
+    margin-bottom: 0.938rem;
 }
 .section-one > p {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 .section-one > div {
     display: flex;
@@ -655,15 +655,15 @@ main .wrapper-bg-primary {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 50px 20px 84px;
+    padding: 3.125rem 1.25rem 5.25rem;
 }
 
 .section-two  > div > h2 {
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
 }
 
 .section-two  > div {
-    margin-bottom: 60px;
+    margin-bottom: 3.75rem;
 }
 .section-two > ul {
     display: flex;
@@ -713,7 +713,7 @@ main .wrapper-bg-primary {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 90px 20px 80px;
+    padding: 5.625rem 1.25rem 5rem;
     gap: 60px;
 }
 .section-three > article {
@@ -724,7 +724,7 @@ main .wrapper-bg-primary {
 
 @media (min-width:800px){
     .section-three > article {
-        padding: 0 50px;
+        padding: 0 3.125rem;
         grid-template-columns: repeat( auto-fit, minmax(400px, 1fr));
         gap:56px;
         text-align: left;
@@ -780,11 +780,11 @@ main .wrapper-bg-primary {
 }
 
 .section-three > article h2 {
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .section-three > article p {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 /* Main section 4 (References) */
@@ -798,15 +798,15 @@ main .wrapper-bg-primary {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 40px 21px;
+    padding: 2.5rem 1.313rem;
 }
 
 .section-four > h2 {
-    margin-bottom: 14px;
+    margin-bottom: 0.875rem;
 }
 
 .section-four > p {
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
 }
 
 .container-logos {
@@ -888,19 +888,19 @@ main .wrapper-bg-primary {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 90px 20px 82px;
+    padding: 5.625rem 1.25rem 5.125rem;
 }
 
 .section-five > img{
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .section-five > h2{
-    margin-bottom: 12px;
+    margin-bottom: 0.75rem;
 }
 
 .section-five > p{
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
 }
 
 .section-five div {
@@ -926,14 +926,14 @@ main .wrapper-bg-primary {
 
 footer {
     width: 100%;
-    padding: 80px 20px;
+    padding: 5rem 1.25rem;
 }
 
 footer > div:first-child {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 49px;
-    margin-bottom: 49px;
+    margin-bottom: 3.063rem;
 }
 
 footer > div:first-child > ul{
