@@ -16,17 +16,16 @@
             <div class="container-nav-header">
                 <div>
                     <nav>
-                        <button type="button">
-                            <span><i class="fa-solid fa-bars"></i></span>
-                        </button>
-                        <ul>
+                        <input class="menu-toggle" type="checkbox"  id="menu-toggle"/>
+                            <label class="menu-icon" for="menu-toggle"><span class="icon"></span></label>
+                        <ul class="menu">
                             <li>Çözüm ve Hizmetler</li>
                             <li>Ürünler</li>
                             <li>Teknolojiler</li>
                             <li>İnsan Kaynakları</li>
                             <li>Kurumsal</li>
-                            <li><a href="#">İletişim</a></li>
                         </ul>
+                        <a href="#">İletişim</a>
                     </nav>
                 </div>
                 <div>
@@ -52,7 +51,10 @@
                     </p>
                     <div>
                         <article>
-                            <img src="./assets/other/File.svg" alt="illustration of a document">
+                            <div>
+                                <span></span>
+                                <img src="./assets/other/File.svg" alt="illustration of a document">
+                            </div>
                             <h3>Döküman Analizi</h3>
                             <p>
                                 Ante vulputate ut at accumsan et. 
@@ -60,7 +62,10 @@
                             </p>
                         </article>
                         <article>
-                            <img src="./assets/other/Star.svg" alt="illustration of a star">
+                            <div>
+                                <span></span>
+                                <img src="./assets/other/Star.svg" alt="illustration of a star">
+                            </div>
                             <h3>Kabul ve Değerlendirme</h3>
                             <p>
                                 Ante vulputate ut at accumsan et. 
@@ -68,15 +73,10 @@
                             </p>
                         </article>
                         <article>
-                            <img src="./assets/other/ChartPieSlice.svg" alt="an illustration of a pie chart">
-                            <h3>Akış Diyagramları</h3>
-                            <p>
-                                Ante vulputate ut at accumsan et. 
-                                Feugiat at tempus, est senectus amet, elementum.
-                            </p>
-                        </article>
-                        <article>
-                            <img src="assets/other/ChartBar.svg" alt="an illustration of a chart bar">
+                            <div>
+                                <span></span>
+                                <img src="./assets/other/ChartPieSlice.svg" alt="an illustration of a pie chart">
+                            </div>
                             <h3>Paydaş Analizi</h3>
                             <p>
                                 Ante vulputate ut at accumsan et. 
@@ -84,16 +84,33 @@
                             </p>
                         </article>
                         <article>
-                            <img src="assets/other/FigmaLogo.svg" alt="illustration of a figma logo">
-                            <h3>İş Kuralları Analizi</h3>
+                            <div>
+                                <span></span>
+                                <img src="assets/other/ChartBar.svg" alt="an illustration of a chart bar">
+                            </div>
+                            <h3>Akış Diyagramları</h3>
+                            <p>
+                                Ante vulputate ut at accumsan et. 
+                                Feugiat at tempus, est senectus amet, elementum.
+                            </p>
+                        </article>
+                        <article>
+                            <div>
+                                <span></span>
+                                <img src="assets/other/FigmaLogo.svg" alt="illustration of a figma logo">
+                            </div>
+                            <h3>Prototipleme</h3>
                             <p>
                                 Ante vulputate ut at accumsan et. 
                                 Feugiat at tempus, est senectus amet, elementum. 
                             </p>
                         </article>
                         <article>
-                            <img src="assets/other/Crown.svg" alt="an illustration of a crown">
-                            <h3>Prototipleme</h3>
+                            <div>
+                                <span></span>
+                                <img src="assets/other/Crown.svg" alt="an illustration of a crown">
+                            </div>
+                            <h3>İş Kuralları Analizi</h3>
                             <p>
                                 Ante vulputate ut at accumsan et. 
                                 Feugiat at tempus, est senectus amet, elementum. 
@@ -101,7 +118,7 @@
                         </article>
                     </div>
                 </section>
-                <div class="bg-primary">
+                <div class="wrapper-bg-primary">
                     <section class="section-two">
                         <div>
                             <h2>Test Yönetimiyle Neler Sağlıyoruz?</h2>
@@ -109,8 +126,11 @@
                         </div>
                         <ul>
                             <li>Yazılım Kalitesini Arttırıyoruz</li>
+                            <span class="carret"></span>
                             <li>Olası Hataları Önceden Belirliyoruz</li>
+                            <span class="carret"></span>
                             <li>Oluşabilecek Riskleri Önlüyoruz</li>
+                            <span class="carret"></span>
                             <li>Zaman ve Maliyetten Tasarruf Sağlıyoruz</li>
                         </ul>
                     </section>
@@ -139,7 +159,7 @@
                         </div>
                     </article>
                 </section>
-                <div class="bg-secondary">
+                <div class="wrapper-bg-secondary">
                     <section class="section-four">
                         <h2>Referanslarımız</h2>
                         <p>
@@ -159,7 +179,10 @@
                     </section>
                 </div>
                 <section class="section-five">
-                    <img src="./assets/other/Users.svg" alt="an illustration of users">
+                    <div>
+                        <span></span>
+                        <img src="./assets/other/Users.svg" alt="an illustration of users">
+                    </div>
                     <h2>Bize Ulaşın</h2>
                     <p>
                         Çözüm, hizmet ve ürünlerimiz hakkında detaylı bilgi için bizimle irtibata geçin.
@@ -167,7 +190,7 @@
                     <a href="#" class="btn">Bize Ulaşın</a>
                 </section>
             </main>
-            <div class="bg-primary">
+            <div class="wrapper-bg-primary">
                 <footer>
                     <div>
                         <ul>
