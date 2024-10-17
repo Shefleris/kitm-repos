@@ -1,0 +1,23 @@
+%btn-base {
+    width: fit-content;
+    border-radius: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.btn {
+    @extend %btn-base;
+    border: 1px solid #000;
+    padding: 10px 20px;
+}
+
+.btn--big {
+    padding: 20px 16px;
+}
+
+.btn--green {
+    background-color: $btn-bg-green;
+    border: none;
+}

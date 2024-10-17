@@ -1,0 +1,24 @@
+/* Navbar */
+nav {
+    @include d-flex(row, space-between, center);
+    width: 100%;
+    margin: 1rem 0 100px;
+    .nav__menu {
+        @include horizontal-list;
+        gap:3rem;
+        .menu__item{
+            a {
+                @include link-reset;
+            }
+            :hover{
+                border-bottom: 2px solid $text-black;
+            }
+            &:nth-child(1){
+                border-bottom: 2px solid $text-black;
+            }
+        }
+    }
+    .nav__logo {
+        @include font-style($text-black, 32px, 400, 48px);
+    }
+}

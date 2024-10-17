@@ -1,0 +1,284 @@
+/* Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+header .section__pitch h1 {
+  color: #1F1D2A;
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 82.5px;
+}
+
+header .section__pitch p {
+  color: #9B948E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+header .section__review > div > div h2 {
+  color: #1F1D2A;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+header .section__review > div > div p {
+  color: #9B948E;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+}
+
+main .section__card__galery h2 {
+  color: #1F1D2A;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 48px;
+}
+
+main .section__card__galery p {
+  color: #1F1D2A;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+}
+
+.card div h2 {
+  color: #1F1D2A;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.card div p {
+  color: #9B948E;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+/* Container */
+.wrapper__body {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  width: 100%;
+  background: linear-gradient(90deg, #E6E6E4, #F0E8E2);
+}
+.wrapper__body .wrapper__body__img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  background-image: url(../assets/Group16.png);
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  background-position: 0 0;
+}
+.wrapper__body .wrapper__body__img .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 1272px;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0 100px;
+}
+nav .nav__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+nav .nav__menu .menu__item a {
+  color: inherit;
+  text-decoration: none;
+}
+nav .nav__menu .menu__item :hover {
+  border-bottom: 2px solid #1F1D2A;
+}
+nav .nav__menu .menu__item:nth-child(1) {
+  border-bottom: 2px solid #1F1D2A;
+}
+nav .nav__logo {
+  color: #1F1D2A;
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 48px;
+}
+
+/* Header */
+header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+header .section__pitch {
+  max-width: 590px;
+}
+header .section__pitch h1 {
+  margin-bottom: 30px;
+}
+header .section__pitch p {
+  margin-bottom: 50px;
+}
+header .section__review > div {
+  position: relative;
+}
+header .section__review > div img {
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+header .section__review > div > div {
+  background-color: #fff;
+  width: fit-content;
+  height: fit-content;
+  position: absolute;
+  padding: 20px;
+  border-radius: 20px;
+  bottom: 10px;
+  left: 10px;
+}
+header .section__review > div > div > div span {
+  font-size: 2rem;
+  color: #FFB988;
+}
+header .section__review > div .btn__next {
+  position: absolute;
+  border: none;
+  border-radius: 50%;
+  background: #9499B7;
+  padding: 20px;
+  right: -10px;
+  bottom: 40%;
+  aspect-ratio: 1/1;
+}
+header .section__review > div .btn__next img {
+  max-width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+/* Main */
+main {
+  width: 100%;
+}
+main .section__trusted {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .section__trusted p {
+  margin-bottom: 30px;
+}
+main .section__trusted .container__logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+  gap: 60px;
+}
+main .section__card__galery {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+main .section__card__galery p {
+  margin-bottom: 10px;
+}
+main .section__card__galery h2 {
+  margin-bottom: 70px;
+}
+main .section__card__galery h2 span {
+  text-decoration: underline;
+  text-decoration-color: #96C67F;
+  text-decoration-thickness: 6px;
+}
+main .section__card__galery .container__cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.btn, header .section__pitch .btn--green {
+  width: fit-content;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.btn {
+  border: 1px solid #000;
+  padding: 10px 20px;
+}
+
+.btn--big, header .section__pitch .btn--green {
+  padding: 20px 16px;
+}
+
+.btn--green {
+  background-color: #96C67F;
+  border: none;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  max-height: 100%;
+  border-radius: 1rem;
+  flex: 0 1 281px;
+}
+.card:nth-child(2) {
+  background-color: #E38D1E;
+}
+.card:nth-child(3) {
+  background-color: #A08DC4;
+}
+.card img {
+  max-width: 100%;
+  object-fit: cover;
+  height: auto;
+  border-radius: 1rem 1rem 0 0;
+}
+.card div {
+  padding: 20px;
+  border-radius: 0;
+  background-color: #fff;
+  border-radius: 0 0 1rem 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

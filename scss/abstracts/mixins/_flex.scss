@@ -1,0 +1,11 @@
+@mixin d-flex ($direction, $justify, $alignment){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $alignment;
+}
+
+@mixin flex-justify ($justify){
+    display: flex;
+    justify-content: $justify;
+}

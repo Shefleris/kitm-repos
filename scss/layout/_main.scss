@@ -1,0 +1,38 @@
+/* Main */
+main {
+    width: 100%;
+    .section__trusted {
+        @include d-flex(column, center, center);
+        p {
+            margin-bottom: 30px;
+        }
+        .container__logos {
+            @include d-flex(row, center, center);
+            margin-bottom: 100px;
+            gap: 60px;
+        }
+    }
+    .section__card__galery {
+        @include d-flex(column, flex-start, center);    
+        margin-bottom: 4rem;
+        p {
+            @extend %section_card_p;
+            margin-bottom: 10px;
+        }  
+        h2 {
+           @extend %section_card_h;
+           margin-bottom: 70px;
+           span {
+                text-decoration: underline;
+                text-decoration-color: $btn-bg-green;
+                text-decoration-thickness:6px;
+           }
+        }
+         
+        .container__cards {
+            @include flex-justify(space-between);
+            align-items: stretch;
+        }
+    }
+}
+
