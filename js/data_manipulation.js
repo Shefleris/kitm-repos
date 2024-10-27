@@ -85,7 +85,7 @@ function calcCategoryValue(categoryID){
         categoryValuation += calcBookInvValue(categoryID, bookID);
     };
 
-    return categoryValuation;
+    return Math.round(categoryValuation * 100)/100;
 };
 
 function calcOverallInvValue(){
