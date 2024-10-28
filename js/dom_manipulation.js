@@ -1,5 +1,61 @@
-import { calcCategoryValue, calcOverallInvValue } from "./data_manipulation.js";
-export { showInventoryValue };
+import { calcCategoryValue, calcOverallInvValue, translateData, checkIfNew} from "./data_manipulation.js";
+import { inventory } from "./inventory_data.js";
+export { showInventoryValue, checkDomElement, domListBook, domUnlistBooks};
+
+function domListBook(multitude='categorized', workArray=inventory, sectionName=undefined){
+    switch (multitude){
+        case 'flat':
+            if (sectionName === undefined){sectionName = 'flat_library'}
+            const createSection = document.createElement('section');
+            workArray.forEach(object => {
+                const createList = document.createElement('ul')
+                for (const [key, value] of Object.entries(object)) {
+                    const createListItem = document.createElement('li');
+                    key === 'publishing_year' ? createListItem.textContent = translateData(key)+': '+ value + checkIfNew(value)
+                        : key === 'price' ? createListItem.textContent = translateData(key)+': '+value+" €"
+                        : createListItem.textContent = translateData(key)+': '+value;
+                    createList.appendChild(createListItem);
+                };
+                createSection.className = sectionName;
+                createSection.appendChild(createList);
+            });
+            document.querySelector('main').prepend(createSection);
+            break
+        case 'categorized':
+            if (sectionName === undefined){sectionName = 'main_library'}    
+            for (const categoryID in workArray) {
+                const createSection = document.createElement('section');
+                const createSectionHeader = document.createElement('h2');
+                createSectionHeader.textContent= workArray[categoryID].category
+                createSection.className = sectionName;
+                createSection.appendChild(createSectionHeader);
+                workArray[categoryID].books.forEach(bookObject=>{
+                    const createList = document.createElement('ul')
+                    for (const [key, value] of Object.entries(bookObject)) {
+                        const createListItem = document.createElement('li');
+                        key === 'publishing_year' ? createListItem.textContent = translateData(key)+': '+ value + checkIfNew(value)
+                            : key === 'price' ? createListItem.textContent = translateData(key)+': '+value+" €"
+                            : createListItem.textContent = translateData(key)+': '+value;
+                        createList.appendChild(createListItem);
+                    };
+                    createSection.appendChild(createList);
+                });
+                document.querySelector('main').appendChild(createSection);
+            };
+            break
+
+    }
+};
+
+function domUnlistBooks(sectionName){
+    const selectCategory = document.querySelectorAll(sectionName);
+    selectCategory.forEach(element => element.remove());
+};
+
+function checkDomElement(elementQuery){
+    let element = document.querySelector(elementQuery);
+    return typeof(element) != 'undefined' && element != null ? true : false;
+};
 
 function showInventoryValue(workArray){
     const createSection = document.createElement('section');

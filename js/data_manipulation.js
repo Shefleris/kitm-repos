@@ -19,16 +19,16 @@ function getFlatInventory(){
     return flatArray;
 }
 
+function checkIfFlatArray(workArray){
+    
+}
+
 /** 
  * @param {String} filterColumn - is used to specify the column whose value will be compared.  
  * @param {String|Number} filterValue - is used to specify the value to be compared to.
 */
-function filterProductBy (filterValue, filterColumn, workArray = getFlatInventory()) {
-    if (filterColumn = "category") {
-        return workArray.filter((element)=>element.category === filterValue)
-    }  else { 
-        return workArray.books.filter((element)=> filterColumn[element] === filterValue)
-    }
+function filterProductBy (filterValue=undefined, filterColumn=undefined, workArray=getFlatInventory()) {    
+    
 }
 
 /**
@@ -107,4 +107,9 @@ function translateData(objectKey){
         case 'price': return 'Kaina';
         case 'category': return 'Kategorija';
     }
+}
+
+function checkIfNew(publishing_year){
+    const date = new Date();
+    return date.getFullYear() == publishing_year ? ' # New Book' : '';
 }
