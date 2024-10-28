@@ -1,27 +1,47 @@
-function unlistBooks(){
-    const selectCategory = document.querySelectorAll('.main__library section');
-    selectCategory.forEach(element => element.remove());
-};
+import { calcCategoryValue, calcOverallInvValue } from "./data_manipulation.js";
+export { showInventoryValue };
 
 function showInventoryValue(workArray){
-    const selectMain = document.querySelector('main');
     const createSection = document.createElement('section');
     const createTable = document.createElement('table');
     const createTHead = document.createElement('thead');
     const createTBody = document.createElement('tbody');
-    const createRow = document.createElement('tr');
-    const createHeader = document.createElement('th');
-    
+    const createTFoot = document.createElement('tfoot');
+  
     createSection.className = 'section__inventoryValue';
 
-    createHeader.textContent = 'Kategorijos pavadinimas';
-    createRow.appendChild(createHeader);
-    createHeader.textContent = 'Vertė';
-    createRow.appendChild(createHeader);
-    createTHead.appendChild(createRow);
+    for (let i = 0; i < 3; i++){
+        const createRow = document.createElement('tr');
+        switch (i){
+            case 0:
+                createRow.append(
+                    document.createElement('th').textContent = 'Kategorijos pavadinimas',
+                    document.createElement('th').textContent = 'Vertė'
+                );
+                createTHead.appendChild(createRow);
+                break;
+            case 1:
+                for (let element in workArray){
+                    const createRow = document.createElement('tr');
+                    createRow.append(
+                        document.createElement('td').textContent = workArray[element].category+' ', 
+                        document.createElement('td').textContent = calcCategoryValue(element)+' €'
+                    );
+                    createTBody.appendChild(createRow);
+                };
+                break;
+            case 2:
+                createRow.append(
+                    document.createElement('td').textContent = 'Suma:',
+                    document.createElement('td').textContent = calcOverallInvValue() + '€'
+                );
+                createTFoot.appendChild(createRow);
+                break ;
+        }  
+    }
     createTable.appendChild(createTHead);
-
-    workArray.forEach(element => {
-        createRow.
-    });
+    createTable.appendChild(createTBody);
+    createTable.appendChild(createTFoot)
+    createSection.appendChild(createTable);
+    document.querySelector('main').appendChild(createSection);
 };
