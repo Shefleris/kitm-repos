@@ -1,5 +1,5 @@
 import { inventory } from "./inventory_data.js";
-export {filterProductBy, sortBy, findMinMax, getFlatInventory, calcBookInvValue, calcCategoryValue, calcOverallInvValue};
+export {translateData, filterProductBy, sortBy, findMinMax, getFlatInventory, calcBookInvValue, calcCategoryValue, calcOverallInvValue};
 
 /**
  * @description - Is used to flaten the data inventory structure 
@@ -95,3 +95,16 @@ function calcOverallInvValue(){
     }
     return inventoryTotalValuation
 };
+
+function translateData(objectKey){
+    switch (objectKey){
+        case 'title': return 'Pavadinimas';
+        case 'author': return 'Autorius';
+        case 'publishing_year': return 'Leidimo metai';
+        case 'ISBN': return 'ISBN';
+        case 'pages': return 'Puslapiai';
+        case 'quantity': return 'Kiekis';
+        case 'price': return 'Kaina';
+        case 'category': return 'Kategorija';
+    }
+}
