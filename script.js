@@ -1,14 +1,14 @@
-const imageList = [{path:'./assets/pexels-abbykihano-230129.jpg', alt:"picture of some tulips"},
-{path:'./assets/pexels-alex-andrews-271121-821736.jpg', alt:"picture of a cat"},
-{path:'./assets/pexels-darrel-und-217939-1242286.jpg', alt:"picture of a flower"},
-{path:'./assets/pexels-ivan-samkov-5429035.jpg', alt:"cowboy pumpkin"},
-{path:'./assets/pexels-kpaukshtite-5429056.jpg', alt:"picture of a mushroom harvest"},
-{path:'./assets/pexels-pixabay-45201.jpg', alt:"picture of a cat"},
-{path:'./assets/pexels-pixabay-220938.jpg', alt:"picture of a dog"},
-{path:'./assets/pexels-pixabay-372166.jpg', alt:"picture of a bunny"},
-{path:'./assets/pexels-suzyhazelwood-1578105.jpg', alt:"picture of some flowers"},
-{path:'./assets/pexels-viktor-smith-593827-1420405.jpg', alt:"picture of a dog"},
-];
+const imageList = [{src:'./assets/pexels-abbykihano-230129.jpg', alt:"picture of some tulips"},
+    {src:'./assets/pexels-alex-andrews-271121-821736.jpg', alt:"picture of a cat"},
+    {src:'./assets/pexels-darrel-und-217939-1242286.jpg', alt:"picture of a flower"},
+    {src:'./assets/pexels-ivan-samkov-5429035.jpg', alt:"cowboy pumpkin"},
+    {src:'./assets/pexels-kpaukshtite-5429056.jpg', alt:"picture of a mushroom harvest"},
+    {src:'./assets/pexels-pixabay-45201.jpg', alt:"picture of a cat"},
+    {src:'./assets/pexels-pixabay-220938.jpg', alt:"picture of a dog"},
+    {src:'./assets/pexels-pixabay-372166.jpg', alt:"picture of a bunny"},
+    {src:'./assets/pexels-suzyhazelwood-1578105.jpg', alt:"picture of some flowers"},
+    {src:'./assets/pexels-viktor-smith-593827-1420405.jpg', alt:"picture of a dog"}
+    ];
 
 function createLayout (){
     const createAside = document.createElement('aside');
@@ -24,7 +24,7 @@ function fillWithDivs(divCount){
     for (let i=0; i < divCount; i++ ){
         const createDiv = document.createElement('div');
         const createImg = document.createElement('img');
-        createImg.src = imageList[i].path;
+        createImg.src = imageList[i].src;
         createImg.alt = imageList[i].alt;
         createImg.className = 'images';
 
@@ -34,14 +34,14 @@ function fillWithDivs(divCount){
 }
 
 function randomizeImages(){
-    let randomizedArray = imageList.sort(() => Math.random()-0.3)
-    for(let i in document.querySelectorAll('main div img')){
-        const modifyImg = document.querySelectorAll('main div img')[i];
-        modifyImg.src = randomizedArray[i].path;
-        modifyImg.alt = randomizedArray[i].alt;
-
-}}
-
+    const modifyImg = document.querySelectorAll('main div img');
+    const randomizedArray = imageList.sort(() => Math.random()-0.3)
+    let count = 0
+    modifyImg.forEach(element => {
+        element.src = randomizedArray[count].src
+        element.alt = randomizedArray[count].alt
+        count++        
+    })};
 
 function replaceButton(){
     const selButton = document.querySelector('aside > button')
@@ -79,9 +79,7 @@ document.querySelector('aside').addEventListener('click', (event)=>{
         case 'maisyti':
             toggleButton();
             randomizeImages();
-            setTimeout(() => {
-                toggleButton();
-              }, "1000");
+            toggleButton();
             break;
     }
 });
