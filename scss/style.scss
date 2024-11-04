@@ -4,14 +4,14 @@
 // Variables
 @import './abstracts/variables';
 
+// Layout
+@import './layout/container';
+@import './layout/navbar';
+@import './layout/main';
+
 // Components
 @import './components/bookCard';
 @import './components/table';
 @import './components/buttons';
 @import './components/select';
 @import './components/input';
-
-// Layout
-@import './layout/container';
-@import './layout/navbar';
-@import './layout/main';
