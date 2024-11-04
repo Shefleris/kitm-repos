@@ -1,10 +1,6 @@
 import { inventory } from "./inventory_data.js";
-export {translateData, filterProductBy, sortBy, findMinMax, getFlatInventory, calcBookInvValue, calcCategoryValue, calcOverallInvValue};
+export {filterProductBy, checkIfNew, translateData, sortBy, findMinMax, getFlatInventory, calcBookInvValue, calcCategoryValue, calcOverallInvValue};
 
-/**
- * @description - Is used to flaten the data inventory structure 
- * @returns - a flat array
- */
 function getFlatInventory(){
     let flatArray = [];
     for (let categoryIt in inventory){
@@ -12,67 +8,71 @@ function getFlatInventory(){
             let tempObject = {};
             Object.assign(tempObject, inventory[categoryIt].books[bookIt]); 
             Object.assign(tempObject, inventory[categoryIt]);
-            delete tempObject.books
+            delete tempObject.books;
             flatArray.push(tempObject);
-        }
-    }
+        };
+    };
     return flatArray;
 }
 
-function checkIfFlatArray(workArray){
-    
-}
-
-/** 
- * @param {String} filterColumn - is used to specify the column whose value will be compared.  
- * @param {String|Number} filterValue - is used to specify the value to be compared to.
-*/
-function filterProductBy (filterValue=undefined, filterColumn=undefined, workArray=getFlatInventory()) {    
-    
-}
-
-/**
- * 
- * @param {String} direction - can be either asc or desc
- * @param {String} columnToSort 
- * @param {Array}[workArray=getFlatInventory]  
- * @returns - the array sorted by the chosen column and direction
- */
-function sortBy(direction = "asc", columnToSort = "price", workArray = getFlatInventory()){
-    let arrayToSort = workArray
-
-    switch (direction){
-        case "asc":
-            return arrayToSort.sort((a,b)=>{
-                if (a[collumnToSort] < b[collumnToSort]){return -1}
-                else if (a[columnToSort] > b[columnToSort]){return 1}
-                else {return 0}     
-            });
-        case "desc":
-            return inventory[i].books.sort((a,b)=>{
-                if (a[columnToSort] > b[columnToSort]){return -1}
-                else if (a[columnToSort] < b[columnToSort]){return 1}
-                else {return 0}     
-            });
-        
+function filterProductBy (formDataInput, workArray = inventory, flat=false) {
+    let filteredData
+    switch (flat){
+        case true:
+            filteredData = workArray;
+            for (let [key, value] of Object.entries(formDataInput)){
+                if (formDataInput[key] === "" ){continue
+                } else if (key==="pages"){filteredData.filter(dataElement => {return dataElement[key]<= value})
+                } else {filteredData = filteredData.filter((dataElement) => {return dataElement[key] === value})};
+            }
+            return filteredData
+        case false:
+            filteredData = workArray
+                .filter((firstFilt) => {
+                    return (firstFilt.category == formDataInput.category || formDataInput.category == "")
+                })
+                .map((elementMap) => ({
+                    ...elementMap,
+                    books: elementMap.books.filter((secondFilt)=>{
+                        return (secondFilt.title.toLowerCase() == formDataInput.title.toLowerCase() || formDataInput.title == "") 
+                        && (secondFilt.pages <= formDataInput.pages || formDataInput.pages == "")
+                    })
+                 }))
+                 .filter((thirdFilt)=>{return thirdFilt.books.length !== 0})
+                 return filteredData
     };
 };
 
-/**
- * @param {String} minMax - specify what to look for: min or max
- * @param {Array}[workArray=getFlatInventory] - specify what array to work on
- * @returns the lowest or highest price found
- */
+function sortBy(columnDirection, workArray=inventory){
+    let words = columnDirection.split('_');
+    let sortDirection = words[1];
+    let columnToSort = words[0];
+    let sorted = workArray.map((sectionIt)=>({
+        ...sectionIt,
+        books: sectionIt.books.sort((a,b)=>{
+            switch (sortDirection){
+                case "asc":
+                    if (a[columnToSort] < b[columnToSort]){return -1}
+                    else if (a[columnToSort] > b[columnToSort]){return 1}
+                    else {return 0}     
+                case "desc":
+                    if (a[columnToSort] > b[columnToSort]){return -1}
+                    else if (a[columnToSort] < b[columnToSort]){return 1}
+                    else {return 0}
+            }    
+    })}))
+    return sorted;
+}
+
 function findMinMax(minMax, workArray = getFlatInventory()){
     const pricesFound = workArray.map(element => element.price);
-        
     switch (minMax){
         case "min":
             return Math.min(...pricesFound);
         case "max":
             return Math.max(...pricesFound);
     }
-}
+};
 
 function calcBookInvValue(categoryID, bookID){
     let valuation = inventory[categoryID].books[bookID].quantity * inventory[categoryID].books[bookID].price;
@@ -101,11 +101,16 @@ function translateData(objectKey){
         case 'title': return 'Pavadinimas';
         case 'author': return 'Autorius';
         case 'publishing_year': return 'Leidimo metai';
-        case 'ISBN': return 'ISBN';
         case 'pages': return 'Puslapiai';
         case 'quantity': return 'Kiekis';
         case 'price': return 'Kaina';
         case 'category': return 'Kategorija';
+        case 'Math':return 'Matematika';
+        case 'Information technologies': return 'Informacinės technologijos';
+        case 'Physics': return 'Fizika';
+        case 'History': return 'Istorija';
+        case 'Economics': return 'Ekonomika';
+        default: return objectKey;
     }
 }
 

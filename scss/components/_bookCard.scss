@@ -1,0 +1,9 @@
+main section div ul {
+    list-style: none;
+    background-color: $bg-bookCard-color;
+    padding: 1rem; 
+    border-radius: 15px; 
+    li{
+        margin: 0;
+    }
+}

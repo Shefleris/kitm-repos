@@ -1,0 +1,69 @@
+/* Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+main section div ul {
+  list-style: none;
+  background-color: #f7e8d7;
+  padding: 1rem;
+  border-radius: 15px;
+}
+main section div ul li {
+  margin: 0;
+}
+
+.section__inventoryValue table {
+  border-collapse: collapse;
+  margin: 2rem 0;
+  min-width: 300px;
+  font-size: 1rem;
+}
+.section__inventoryValue table thead {
+  border: 1px solid #000;
+  text-align: left;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fffdf8;
+}
+
+main {
+  width: 100%;
+  max-width: 1400px;
+}
+main .section__category {
+  background-color: #fff7e4;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+}
+main .section__category div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

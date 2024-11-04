@@ -2,48 +2,51 @@ import { calcCategoryValue, calcOverallInvValue, translateData, checkIfNew} from
 import { inventory } from "./inventory_data.js";
 export { showInventoryValue, checkDomElement, domListBook, domUnlistBooks};
 
-function domListBook(multitude='categorized', workArray=inventory, sectionName=undefined){
-    switch (multitude){
-        case 'flat':
-            if (sectionName === undefined){sectionName = 'flat_library'}
+function domListBook(workArray, flat=false, sectionName=undefined){
+    if (sectionName === undefined){sectionName = 'section__category'};
+
+    switch (flat){
+        case true:
             const createSection = document.createElement('section');
+            const createDiv = document.createElement('div');
             workArray.forEach(object => {
                 const createList = document.createElement('ul')
                 for (const [key, value] of Object.entries(object)) {
                     const createListItem = document.createElement('li');
                     key === 'publishing_year' ? createListItem.textContent = translateData(key)+': '+ value + checkIfNew(value)
                         : key === 'price' ? createListItem.textContent = translateData(key)+': '+value+" €"
-                        : createListItem.textContent = translateData(key)+': '+value;
+                        : createListItem.textContent = translateData(key)+': '+translateData(value);
                     createList.appendChild(createListItem);
                 };
+                createDiv.appendChild(createList)
                 createSection.className = sectionName;
-                createSection.appendChild(createList);
+                createSection.appendChild(createDiv);
             });
             document.querySelector('main').prepend(createSection);
             break
-        case 'categorized':
-            if (sectionName === undefined){sectionName = 'main_library'}    
-            for (const categoryID in workArray) {
+        case false:   
+            workArray.forEach(categorySection=>{
                 const createSection = document.createElement('section');
+                const createDiv = document.createElement('div');
                 const createSectionHeader = document.createElement('h2');
-                createSectionHeader.textContent= workArray[categoryID].category
+                createSectionHeader.textContent= translateData(categorySection.category)
                 createSection.className = sectionName;
                 createSection.appendChild(createSectionHeader);
-                workArray[categoryID].books.forEach(bookObject=>{
+                categorySection.books.forEach(bookCard=>{
                     const createList = document.createElement('ul')
-                    for (const [key, value] of Object.entries(bookObject)) {
+                    for (const [key, value] of Object.entries(bookCard)) {
                         const createListItem = document.createElement('li');
                         key === 'publishing_year' ? createListItem.textContent = translateData(key)+': '+ value + checkIfNew(value)
                             : key === 'price' ? createListItem.textContent = translateData(key)+': '+value+" €"
-                            : createListItem.textContent = translateData(key)+': '+value;
+                            : createListItem.textContent = translateData(key)+': '+translateData(value);
                         createList.appendChild(createListItem);
                     };
-                    createSection.appendChild(createList);
-                });
-                document.querySelector('main').appendChild(createSection);
-            };
+                    createDiv.appendChild(createList);
+                    createSection.appendChild(createDiv);
+                })
+                document.querySelector('main').appendChild(createSection)
+            })    
             break
-
     }
 };
 
@@ -57,7 +60,7 @@ function checkDomElement(elementQuery){
     return typeof(element) != 'undefined' && element != null ? true : false;
 };
 
-function showInventoryValue(workArray){
+function showInventoryValue(workArray=inventory){
     const createSection = document.createElement('section');
     const createTable = document.createElement('table');
     const createTHead = document.createElement('thead');
@@ -70,34 +73,46 @@ function showInventoryValue(workArray){
         const createRow = document.createElement('tr');
         switch (i){
             case 0:
-                createRow.append(
-                    document.createElement('th').textContent = 'Kategorijos pavadinimas',
-                    document.createElement('th').textContent = 'Vertė'
-                );
+                const createColumn1 = document.createElement('th');
+                const createColumn2 = document.createElement('th');
+            
+                createColumn1.textContent = 'Kategorijos pavadinimas';
+                createColumn2.textContent = 'Vertė'
+                
+                createRow.append(createColumn1,createColumn2);
                 createTHead.appendChild(createRow);
-                break;
+                break
+
             case 1:
-                for (let element in workArray){
+                workArray.forEach((element, index )=>{
+                    const createCell1 = document.createElement('td');
+                    const createCell2 = document.createElement('td');
                     const createRow = document.createElement('tr');
-                    createRow.append(
-                        document.createElement('td').textContent = workArray[element].category+' ', 
-                        document.createElement('td').textContent = calcCategoryValue(element)+' €'
-                    );
+                    
+                    createCell1.textContent = translateData(element.category)+' '
+                    createCell2.textContent = calcCategoryValue(index)+' €'
+              
+                    createRow.append(createCell1, createCell2);
                     createTBody.appendChild(createRow);
-                };
-                break;
+                })
+                break
+
             case 2:
-                createRow.append(
-                    document.createElement('td').textContent = 'Suma:',
-                    document.createElement('td').textContent = calcOverallInvValue() + '€'
-                );
+                const createCell1 = document.createElement('td');
+                const createCell2 = document.createElement('td');
+
+                createCell1.textContent = 'Suma:';
+                createCell2.textContent = calcOverallInvValue() + '€'
+
+                createRow.append(createCell1,createCell2)
                 createTFoot.appendChild(createRow);
-                break ;
-        }  
+                break
+        }
     }
+
     createTable.appendChild(createTHead);
     createTable.appendChild(createTBody);
     createTable.appendChild(createTFoot)
     createSection.appendChild(createTable);
-    document.querySelector('main').appendChild(createSection);
+    document.querySelector('main').prepend(createSection);
 };
