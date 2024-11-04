@@ -7,10 +7,12 @@ button {
     &:hover{
         background-color: $bg-button-hover-color;
     }
+    
     &:active{
         background-color: $bg-button-active-color;
         box-shadow: inset 0px 5px 10px 0 rgb(66, 66, 66);
     }
+
     &:disabled{
         background-color: transparent;
         color:#292929;
