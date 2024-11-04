@@ -25,8 +25,11 @@ document.querySelector('.nav__buttonsValue').addEventListener('click', (event)=>
             domListBook(booksFound, true);
             break
         case 'button__calcInvValue':
-            checkDomElement('.section__inventoryValue') === true ? document.querySelector('.section__inventoryValue').remove()
-                :showInventoryValue(inventory);
+            if (checkDomElement('.section__inventoryValue') === true){
+                document.querySelector('.section__inventoryValue').remove();
+            } else {
+                showInventoryValue(inventory);
+            }
             break;
     };
 });
