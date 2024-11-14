@@ -1,7 +1,5 @@
-export {cityLatitude, cityLongtitude, weatherAPIKey, weatherGeoApiUrl, weatherAPIUrl}
+export {units, weatherAPIKey, weatherAPIUrl}
 
 const weatherAPIKey = process.env.MIX_API_KEY;
-const cityLatitude = '54.9'
-const cityLongtitude = '23.9'
-const weatherGeoApiUrl =`https://api.openweathermap.org/geo/1.0/direct?`
-const weatherAPIUrl = `https://api.openweathermap.org/data/2.5/weather?`
+const weatherAPIUrl = `https://api.openweathermap.org/data/2.5/weather?`;
+const units = 'metric';//Don't change for now default: Kelvin, metric: Celsius, imperial: Fahrenheit

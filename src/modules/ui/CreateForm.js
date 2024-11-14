@@ -3,7 +3,7 @@ export class CreateUi{
         return `
         <div class="form-floating my-3">
             <input type="text" id="search" class="form-control term" placeholder='Įveskite miesto pavadinima'>
-            <label for="search" placeholder>Paieška</label>
+            <label for="search" placeholder>Įveskite miesto pavadinimą</label>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
         `

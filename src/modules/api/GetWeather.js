@@ -1,12 +1,12 @@
 import { weatherAPIUrl, weatherAPIKey} from "../../settings";
 
 export class GetWeather{
-    constructor(latitude, longtitude){
+    constructor(cityName, units='metric'){
         this.apiKey = weatherAPIKey;
         this.apiUrl = weatherAPIUrl;
-        this.latitude = latitude;
-        this.longtitude = longtitude;
-        this.values
+        this.cityName = cityName;
+        this.unit = units;
+        this.values;
     }
 
     get thisInstance(){
@@ -14,7 +14,7 @@ export class GetWeather{
     }
 
     async getWeather(){
-        const requestUrl = `${this.apiUrl}lat=${this.latitude}&lon=${this.longtitude}&appid=${this.apiKey}`
+        const requestUrl = `${this.apiUrl}q=${this.cityName}&units=${this.unit}&appid=${this.apiKey}`
         const response = await fetch(requestUrl).then((Response)=>{
             if (!Response.ok){
                 throw new Error('Api was not ok')
@@ -22,6 +22,7 @@ export class GetWeather{
             return Response.json()
         });
         this.values = response;
-        return this.values;
+        console.log(this.values)
+        return this;
     }
 }

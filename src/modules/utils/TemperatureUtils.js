@@ -1,8 +1,9 @@
-export class ProcessTemp{
+export class ProcessTempData{
     constructor(temperature, tempUnit='C'){
         this.temperature = temperature
         this.tempUnit = tempUnit
     }
+
 
     tempConverter(prefferedUnit){
         if (this.unit != prefferedUnit){
@@ -18,5 +19,12 @@ export class ProcessTemp{
             }
         }
     }
+
+    // humanReadable(timeStampEpoch){
+    //     let hours = timeStampEpoch.getHours();
+    //     let minutes = timeStampEpoch.getMinutes();
+    //     let hours = timeStampEpoch.getHours()
+    //     let hours = timeStampEpoch.getHours()
+    // }
 
 }
