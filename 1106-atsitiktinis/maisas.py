@@ -1,6 +1,7 @@
 import random
 
 def vartotojoEjimas(likusiuAkmenuSk):
+    print('')
     print('Pasirinkite kiek akmenų norite traukti nuo 1 iki 3')
     vartotojoSk = int(input('input=...'))
     while vartotojoSk not in [1,2,3] or vartotojoSk > likusiuAkmenuSk:
@@ -11,6 +12,7 @@ def vartotojoEjimas(likusiuAkmenuSk):
 
 
 def kompiuterioEjimas(likusiuAkmenuSk):
+    print('')
     kompiuterioSk = int(random.randint(1, 3))
     while kompiuterioSk not in [1,2,3] or kompiuterioSk > likusiuAkmenuSk:
         kompiuterioSk = int(random.randint(1, 3))
