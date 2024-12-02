@@ -1,53 +1,62 @@
 import random
 
-class GuessingGame:
-    roundNr = 1
-    actualNumber
+def getRandom():
+    print('Įrašykite skaičių iki kurio sugeneruoti')
+    generatorNr = int(input('input=...'))
+    actualNumber = random.randint(1, generatorNr)
+    return generatorNr, actualNumber
 
-    def getRandom():
-        print('Įrašykite skaičių iki kurio sugeneruoti')
-        n = int(input('input=...'))
-        actualNumber = randint(1, n)
-        return actualNumber
+def getGuess():
+    print('Įrašykite spėjimą')
+    while True:
+        try:
+            roundGuess = int(input('input=...'))
+            if int(roundGuess)<1: 
+                raise ValueError
+            else:
+                break
+           
+        except ValueError:
+            print('Spėjimas turi būti skaičius didesnis negu 0.')
+    return int(roundGuess)
 
-    def getGuess():
-        print('Įrašykite spėjimą')
-        roundGuess = int(input('input=...'))
-        return roundGuess
+def getRepeatGame():
+    print('Ar žaisite dar? Taip ar Ne')
+    repeatGame = input('input=...')
+    return repeatGame
 
-    def getRepeatGame():
-        print('Ar žaisite dar? y or n')
-        repeatGame = input('input=...')
-        return repeatGame
-
-    def processGuess():
-        if roundGuess > actualNumber:
-            return 'Sugeneruotas skaičius yra mažesnis'
-        elif roundGuess < actualNumber:
-            return 'Sugeneruotas skaičius yra didesnis'
-        else:
-            return 'Atspėjote sugeneruota skaičių'
-    
-    def resetGameState():
-        roundNr = 1
-
-    def playGame():
-        getRandom()
+def processGuess(roundGuess, actualNumber):
+    if roundGuess > actualNumber:
+        print('Sugeneruotas skaičius yra mažesnis')
+        return 'sugeneruotas skaičius yra mažesnis'
+    elif roundGuess < actualNumber:
+        print('Sugeneruotas skaičius yra didesnis')
+        return 'sugeneruotas skaičius yra didesnis'
+    else:
+        print(f'Atspėjote sugeneruota skaičių {actualNumber}')
+        return 
 
 
-class IoFile:
-    def __init__(roundNr, roundGuess, actualNumber):
-        self.roundNr = roundNr
-        self.roundGuess = roundGuess
-        self.actualNumber = actualNumber
+def playGame():
+    with open('registravimas.txt', 'w', encoding='UTF-8') as f:
+        gameNumber = 0
+        repeatGame = 'Taip'
+        while repeatGame in ['Taip', 'taip', 'T', 't']:
+            playerGuess = roundNr = 0
+            gameNumber += 1
+            geratorNumber, actualNumber = getRandom()
+            f.write(f'Vartotojas įvedė skaičių {geratorNumber} \n')
+            f.write(f'Sugeneruotas atsitiktinis skaičius {actualNumber} .\n')
+            while playerGuess != actualNumber:
+                roundNr +=1
+                playerGuess = getGuess()
+                guessResult = processGuess(playerGuess, actualNumber)
+                if playerGuess != actualNumber:
+                    f.write(f'{roundNr} spėjimu vartotojas įvedė {playerGuess}. Atsakymas - {guessResult} \n')
+            repeatGame = getRepeatGame()
+            f.write(f'...............\n')
+            f.write(f'{roundNr} spėjimu vartotojas atspėjo skaičių\n')
+            f.write(f'Į užklausą „Ar žaisite dar“ pasirinko {repeatGame}\n')
+        f.write(f'Vartotojas žaidė {gameNumber} kartus/ą \n')        
 
-    def writeF():
-        with open('./registravimas.txt', 'w') as f:
-            pass
-    
-    def readF():
-        with open('./registravimas.txt', 'r') as f:
-            txt = []
-        for eil in f:
-            txt = f.readlines()
-        return txt
+playGame()
