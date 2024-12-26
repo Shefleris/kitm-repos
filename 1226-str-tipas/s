@@ -1,0 +1,35 @@
+def readFile():
+    with open('1226-str-tipas/duom1.txt', 'r', encoding='utf-8') as f:
+        lineList = f.read().splitlines()
+        print(lineList)
+        return lineList
+
+def writeFile(textToWrite):
+    with open('1226-str-tipas/rez1.txt', 'w', encoding='utf-8') as f:
+        f.writelines(textToWrite)
+
+def atbashDecodeLetter(letter):
+    alphabet = "abcdefghijklmnopqrstuvwxyz" ## Užduoties atbash kodo pavyzdyje u ū ų atgaliniu raidžiu serija turėtu būti ū ų u. 
+    reversedAlpha = alphabet[::-1]
+    if letter.islower() and letter in alphabet:
+        return alphabet[alphabet.index(letter)]
+    elif letter.isupper() and letter.lower() in alphabet:
+        decodedLetter = alphabet[alphabet.index(letter.lower())]
+        return decodedLetter.upper()
+    else:
+        return letter
+
+def atbashDecoder(stringToEncode):
+    decodedString = ""
+    for letter in stringToEncode:
+        decodedString += atbashLetter(letter)
+    return decodedString
+
+def decodeFile():
+    decodedList = []
+    lineList = readFile()
+    for line in lineList:
+        decodedList.append(atbashEncoder(line)+'\n')
+    writeFile(decodedList)
+
+encodeFile()
