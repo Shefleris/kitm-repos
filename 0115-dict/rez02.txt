@@ -1,0 +1,33 @@
+Klasė 1:
+Samanta 10.0
+Edvinas 9.9
+Tomas 9.5
+Nerijus 7.1
+-----------------------------
+Klasė 2:
+Agnė 9.1
+Aurimas 8.8
+Ieva 8.2
+Simonas 7.1
+-----------------------------
+Klasė 3:
+Lukas 9.2
+Raminta 8.5
+Tautvydas 7.1
+Mantas 6.7
+-----------------------------
+Klasė 4:
+Emilija 10.0
+Austėja 9.9
+Jokūbas 8.5
+-----------------------------
+Rezultatas:
+Emilija 10.0
+Samanta 10.0
+Austėja 9.9
+Edvinas 9.9
+Tomas 9.5
+Lukas 9.2
+Agnė 9.1
+Aurimas 8.8
+-----------------------------
