@@ -1,0 +1,11 @@
+{
+  "name": "250116-matrix-rotation",
+  "version": "1.0.0",
+  "main": "data.js",
+  "scripts": {
+    "start": "node ./src/matrix.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
