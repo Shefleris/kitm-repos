@@ -1,0 +1,17 @@
+Duomenys pateikti dešimtyje tekstinių failų. 
+Reikia nuskaityti failuose esančius sveikuosius skaičius, apskaičiuoti jų sumą, kiekį, didžiausią ir mažiausią skaičius ir jų kiekius. 
+Visą informaciją surašyti į bylą rez.txt.
+Kad nebūtų viskas taip paprasta ir lengva yra įsimaišę „nekorektiškų“ duomenų ir bylos vardų. 
+Visus nekorektiškus duomenis reikia surašyti į bylą klaidos.txt tokiu formatu:
+
+
+Byla duom1.txt 1 eilutė elementas ‘a‘ nėra sveikasis skaičius 
+Byla duom1.txt 1 eilutė elementas ‘15x‘ nėra sveikasis skaičius
+Byla duom1.txt 5 eilutė elementas ‘Labai‘ nėra sveikasis skaičius
+Byla duom1.txt 5 eilutė elementas ‘sunku‘ nėra sveikasis skaičius
+
+............................................................
+Byla duom4.txt nesurasta
+............................................................
+Perteklinius tarpus ir „enter“ paspaudimus eliminuoti ir nefiksuoti klaidų žurnale. 
+Kam užduotis pasirodys per lengva fiksuokite ir kelintas klaidingai įrašytas elementas eilutėje yra :)

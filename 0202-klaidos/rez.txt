@@ -1,0 +1,8 @@
+Byla duom1.txt skaiČiu suma 457 bylos skaičiu kiekis 23, didžiausias skaičius 87, mažiausias skaičius -45
+Byla duom2.txt skaiČiu suma 376 bylos skaičiu kiekis 24, didžiausias skaičius 87, mažiausias skaičius 1
+Byla duom3.txt skaiČiu suma 1866 bylos skaičiu kiekis 23, didžiausias skaičius 1500, mažiausias skaičius 1
+Byla duom5.txt skaiČiu suma 99 bylos skaičiu kiekis 24, didžiausias skaičius 9, mažiausias skaičius -5
+Byla duom6.txt skaiČiu suma 721 bylos skaičiu kiekis 28, didžiausias skaičius 87, mažiausias skaičius 2
+Byla duom8.txt skaiČiu suma 1758 bylos skaičiu kiekis 17, didžiausias skaičius 1500, mažiausias skaičius 2
+Byla duom9.txt skaiČiu suma 834 bylos skaičiu kiekis 17, didžiausias skaičius 500, mažiausias skaičius -54
+Byla duom10.txt skaiČiu suma 721 bylos skaičiu kiekis 28, didžiausias skaičius 87, mažiausias skaičius 2
