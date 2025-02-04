@@ -1,0 +1,94 @@
+.container {
+    background: #fff url("./assets/2151700212.jpg") repeat right top;
+    width: 100dvw;
+    height:100dvh;
+    position: relative;
+}
+
+main {
+    width: 40%;
+    background-color: pink;
+    position: absolute;
+    top:30%;
+    left:15%;
+    text-align: center;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+.apple-positioning div:nth-child(1) {
+    position: absolute;
+    top: 25%;  
+    left: 20%;
+}
+
+.apple-positioning div:nth-child(2) {
+    position: absolute;
+    top: 25dvh;
+    left: 50%;
+}
+
+.apple-positioning div:nth-child(3) {
+    position: absolute;
+    top: 55dvh;
+    left: 15%;
+}
+
+h1 {
+    color: red;
+}
+
+img {
+    width: 10%;
+}
+
+button {
+    background-color: red;
+    border:none;
+    color: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+}
+
+a {
+    display:block;
+}
+
+footer {
+    position: absolute;
+    bottom: 0rem;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    height: 10%;
+}
+
+footer div div:hover {
+    border: 2px solid red;
+}
+
+footer div div {
+    width: 10rem;
+    height: 100;
+    display: inline-block;
+    background-color: black;
+}
+
+footer div div:nth-child(1) {
+    position:absolute;
+    left: 45%;
+    top:-25%;
+}
+
+footer div div:nth-child(2) {
+    position:absolute;
+    left: 50%;
+    top:-25%;
+}
+
+footer div div:nth-child(3) {
+    position:absolute;
+    left: 55%;
+    top:-25%;
+}

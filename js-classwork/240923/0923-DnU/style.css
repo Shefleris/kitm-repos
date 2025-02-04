@@ -1,0 +1,53 @@
+section {
+    background-color: grey;
+    width: 80dvw;
+    margin:80px auto;
+    height: 80dvh;
+    position:relative;
+}
+
+section div {
+    width: 200px;
+    height:200px;
+    margin:0 auto;
+    line-height: 200px;
+    position:absolute;
+}
+
+section div h2{
+    text-align: center;
+    vertical-align: middle;
+    margin: 0;
+}
+
+section div:nth-child(1){
+    background-color: rgb(238, 253, 171);
+    top:0;
+}
+
+section div:nth-child(2){
+    background-color: rgb(255, 0, 0);
+    bottom:0;
+}
+
+section div:nth-child(3){
+    background-color: green;
+    right: 0;
+}
+
+section div:nth-child(4){
+    background-color: rgb(111, 0, 255);
+    right: 0;
+    bottom: 0;
+}
+
+section div:nth-child(5){
+    background-color:turquoise;
+    bottom:35%;
+    left: 40%;
+}
+
+footer {
+    position: absolute;
+    bottom: 10rem;
+}

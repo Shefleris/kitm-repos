@@ -1,0 +1,53 @@
+.container{
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(200deg, $backgroundColourOne, $backgroundColourTwo);
+    main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: $loginMenuBgColour;
+        padding: 20px 40px;
+        border-radius: 10px;
+        width: 20vw;
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            label {
+                font-size: smaller;
+                margin-bottom: 4px;
+            }
+            div {
+                @extend .form-text;
+                margin-bottom: 1rem;
+            }
+            a {
+                margin-bottom: 2rem;
+                text-align: right;
+                text-decoration: none;
+                color: $secondaryTextColour;
+                font-size:0.8rem;
+            }
+            button {
+                @extend .button;
+                margin-bottom: 2rem;
+            }
+        }
+    }   
+    main > div {
+        a, p {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size:0.8rem;
+            color: $secondaryTextColour;
+            text-decoration: none;
+        } 
+    } 
+    
+}

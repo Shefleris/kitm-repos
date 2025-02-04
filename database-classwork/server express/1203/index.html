@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <main>
+        <form>
+            <label for="create-name">Tree name</label>
+            <input type="text" id="create-name" required>
+            
+            <label for="create-height">Tree height</label>
+            <input type="text" id="create-height" required>
+            
+            <label for="create-type">Tree type</label>
+            <select id="create-type">
+                <option value="lapuotis">Lapuotis</option>
+                <option value="spygliuotis">Spygliuotis</option>
+                <option value="palme">Palme</option>
+            </select>
+            
+            <button type="submit" id="create">Insert</button>
+            <button type="button" id="updateSave">Update</button>
+        </form>
+        <div id="message">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Height</th>
+                        <th>Type</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* resets */
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+*{
+    padding: 0;
+    margin:0;
+}
+
+/* Colours */
+header {
+    background-color: rgb(130, 247, 247);
+}
+
+.hero {
+    background-color: rgb(190, 166, 190);
+}
+
+.sidebar{
+    background-color: rgb(118, 136, 91);
+}
+
+.container main article:nth-child(1){
+    background-color: rgb(255, 228, 196);
+}
+
+.container main article:nth-child(2){
+    background-color: rgb(122, 122, 122);
+}
+
+.container footer {
+    background-color: rgb(255, 165, 0);
+}
+
+
+h1, h2 {
+    font-size: 2rem;
+}
+
+/* Layout */
+.body-container {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    max-width: 900px;
+    height: 90dvh;
+}
+
+.container,
+.container section, 
+.container section aside,
+.container main,
+.related-stuff {
+    gap: 0.3rem;
+}
+
+header,
+.hero,
+.sidebar,
+.container main article,
+.related-stuff div,
+.container footer {
+    padding:1rem;
+    text-align: center;
+}
+
+header {
+    flex-grow: 1;
+}
+
+
+/* Section layout */
+.container section{
+    display: flex;
+}
+
+/* Aside layout */
+.container-main aside {
+    display: flex;
+    flex-direction: column;
+    flex: 3 0 30%;
+}
+
+.hero{
+    flex:2 0 auto;
+}
+
+.sidebar {
+    flex: 1 0 auto;
+}
+
+/* Main layout */
+.container-main {
+    flex: 10 0 auto;
+}
+
+.container main {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.container main article:nth-child(1){
+    flex: 3 0 auto;
+}
+.container main article:nth-child(2){
+    flex: 1 0 auto;
+}
+
+/* Related stuff layout */
+.related-stuff {
+    display: flex;
+    flex-grow: 1;
+}
+
+.related-stuff div:nth-child(1){
+    background-color: green;
+    flex:2 1 auto;
+}
+
+.related-stuff div:nth-child(2){
+    background-color: pink;
+    flex:1 1 auto;
+}
+
+/* Footer */
+footer {
+    flex-grow: 1;
+}

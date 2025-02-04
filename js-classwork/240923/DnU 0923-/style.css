@@ -1,0 +1,53 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: max(60vw, 600px);
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-top: 10vh;
+}
+
+.logo img {
+    object-fit: scale-down;
+    max-width:10vw;
+    margin: 0 2rem;
+}
+
+.logo span {
+    font-size:1.5rem;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.main-paragrapth {
+    border-top: 1px solid grey;
+    border-bottom: 1px solid grey;
+    padding: 1rem auto;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+}
+
+section {
+    display: flex;
+    gap: 1rem;
+    justify-items: distribute;
+}
+
+footer {
+    height: 2rem;
+    color: gray;
+}

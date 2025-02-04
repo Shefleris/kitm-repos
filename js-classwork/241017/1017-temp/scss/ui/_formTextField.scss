@@ -1,0 +1,12 @@
+.form-text{
+    border: none;
+    border-bottom: 1px solid $secondaryTextColourSubtle;
+    color: $secondaryTextColourSubtle;
+    display: flex;
+    width: 100%;
+    input {
+        border: none;
+        width: 100%;
+    }
+    
+}

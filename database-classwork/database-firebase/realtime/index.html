@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js" type="module"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row my-5">
+            <h1 class="text-center text-secondary">
+                Vanilla JavaScript and Firebase CRUD project
+            </h1>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <form class="px-3">
+                <div class="mb-3">
+                    <label for="enterID" class="form-label text-secondary"
+                    >Prekės ID</label
+                    >
+                    <input
+                    type="number"
+                    class="form-control"
+                    id="enterID"
+                    placeholder="only numbers..."
+                    />
+                </div>
+                <div class="mb-3">
+                    <label for="enterName" class="form-label text-secondary"
+                    >Produkto pavadinimas</label
+                    >
+                    <input type="text" class="form-control" id="enterName" />
+                </div>
+                <div class="mb-3">
+                    <label for="enterQuantity" class="form-label text-secondary"
+                    >Produkto kiekis</label
+                    >
+                    <input type="text" class="form-control" id="enterQuantity" />
+                </div>
+                <div class="mb-3 d-flex justify-content-around align-items-center">
+                    <button type="submit" class="btn btn-secondary" id="insert">
+                        Insert
+                    </button>
+                    <button type="submit" class="btn btn-secondary" id="update">
+                        Update
+                    </button>
+                    <button type="submit" class="btn btn-secondary" id="remove">
+                        Delete
+                    </button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
