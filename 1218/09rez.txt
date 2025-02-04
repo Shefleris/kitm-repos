@@ -1,0 +1,20 @@
+Romas 4 7 1
+Ignas 5 4 3
+Justė 8
+Darius 10
+----------------------------------------------
+Romas suma = 12, didziausias = 7
+Ignas suma = 12, didziausias = 5
+Justė suma = 8, didziausias = 8
+Darius suma = 10, didziausias = 10
+----------------------------------------------
+Darius suma = 10, didziausias = 10
+Ignas suma = 12, didziausias = 5
+Justė suma = 8, didziausias = 8
+Romas suma = 12, didziausias = 7
+----------------------------------------------
+Romas suma = 12, didziausias = 7
+Ignas suma = 12, didziausias = 5
+Darius suma = 10, didziausias = 10
+Justė suma = 8, didziausias = 8
+----------------------------------------------

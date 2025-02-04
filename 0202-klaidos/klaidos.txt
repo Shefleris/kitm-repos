@@ -1,0 +1,18 @@
+Byla duom1.txt 1 eilutė elementas a nėra sveikasis skaičius 
+Byla duom1.txt 1 eilutė elementas 15# nėra sveikasis skaičius 
+Byla duom1.txt 5 eilutė elementas Labai nėra sveikasis skaičius 
+Byla duom1.txt 5 eilutė elementas sunku nėra sveikasis skaičius 
+Byla duom3.txt 2 eilutė elementas 8x nėra sveikasis skaičius 
+Byla duom3.txt 3 eilutė elementas 2x nėra sveikasis skaičius 
+............................
+Byla duom4.txt nerasta 
+............................
+Byla duom5.txt 4 eilutė elementas AČIŪ nėra sveikasis skaičius 
+Byla duom5.txt 5 eilutė elementas 5.8 nėra sveikasis skaičius 
+............................
+Byla duom7.txt nerasta 
+............................
+Byla duom8.txt 3 eilutė elementas 5x nėra sveikasis skaičius 
+Byla duom8.txt 3 eilutė elementas w nėra sveikasis skaičius 
+Byla duom8.txt 4 eilutė elementas Ą nėra sveikasis skaičius 
+Byla duom8.txt 4 eilutė elementas č nėra sveikasis skaičius 

@@ -1,0 +1,13 @@
+Romas  4 
+Ignas  5
+Justė  8  
+Darius 10
+Ignas  4
+Romas  7
+Ignas  3
+Romas  1
+
+
+
+
+                     

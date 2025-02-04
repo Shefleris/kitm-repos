@@ -1,0 +1,3 @@
+Netinkamas.Trūksta 1 specialių simboliu
+Netinkamas.Slaptažodis per trumpas.
+Tinkamas.

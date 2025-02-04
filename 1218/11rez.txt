@@ -1,0 +1,21 @@
+Vyc Jonaitis         surinko viso 33, trit.= 5, dvit. =7, baudos = 4, prazangos = 2
+Jonas Jonaitis       surinko viso 33, trit.= 5, dvit. =7, baudos = 4, prazangos = 4
+Petras Antanaitis    surinko viso 11, trit.= 2, dvit. =2, baudos = 1, prazangos = 5
+Rimas                surinko viso 20, trit.= 4, dvit. =2, baudos = 4, prazangos = 5
+Atnas Jonaitis       surinko viso 33, trit.= 5, dvit. =7, baudos = 4, prazangos = 2
+Jonas Petras Antanas surinko viso 19, trit.= 2, dvit. =4, baudos = 5, prazangos = 4
+-------------------------------------------------------------------------
+Vyc Jonaitis         surinko viso 33, trit.= 5, dvit. =7, baudos = 4, prazangos = 2
+Atnas Jonaitis       surinko viso 33, trit.= 5, dvit. =7, baudos = 4, prazangos = 2
+Jonas Jonaitis       surinko viso 33, trit.= 5, dvit. =7, baudos = 4, prazangos = 4
+Rimas                surinko viso 20, trit.= 4, dvit. =2, baudos = 4, prazangos = 5
+Jonas Petras Antanas surinko viso 19, trit.= 2, dvit. =4, baudos = 5, prazangos = 4
+Petras Antanaitis    surinko viso 11, trit.= 2, dvit. =2, baudos = 1, prazangos = 5
+-------------------------------------------------------------------------
+Atnas Jonaitis       surinko viso 33, trit.= 5, dvit. =7, baudos = 4, prazangos = 2
+Vyc Jonaitis         surinko viso 33, trit.= 5, dvit. =7, baudos = 4, prazangos = 2
+Jonas Jonaitis       surinko viso 33, trit.= 5, dvit. =7, baudos = 4, prazangos = 4
+Rimas                surinko viso 20, trit.= 4, dvit. =2, baudos = 4, prazangos = 5
+Jonas Petras Antanas surinko viso 19, trit.= 2, dvit. =4, baudos = 5, prazangos = 4
+Petras Antanaitis    surinko viso 11, trit.= 2, dvit. =2, baudos = 1, prazangos = 5
+-------------------------------------------------------------------------
