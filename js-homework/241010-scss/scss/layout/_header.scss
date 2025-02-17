@@ -1,0 +1,62 @@
+/* Header */
+header {
+    width: 100%;
+    @include flex-justify(space-between);
+    margin-bottom: 100px;
+    .section__pitch {
+        max-width: 590px;
+        h1 {
+            @extend %header_h;
+            margin-bottom: 30px;
+        }
+        p {
+            @extend %header_p;
+            margin-bottom: 50px;
+        }
+        .btn--green{
+            @extend .btn--big;
+            @extend %btn-base;
+        }
+    }
+    .section__review > div {
+        position: relative;
+        img{
+            @include img-fluid;
+            border-radius: 50%;       
+        }
+        & > div {
+            background-color: $bg-white;
+            width: fit-content;
+            height: fit-content;
+            position: absolute;
+            padding: 20px;
+            border-radius: 20px;
+            bottom: 10px;
+            left: 10px;
+            h2 {
+                @extend %header_review_h;
+            }
+            p {
+                @extend %header_review_p;
+            }
+            &>div span {
+                font-size: 2rem;
+                color: $star-yellow;
+            }
+        }
+        .btn__next {
+            position: absolute;
+            border: none;
+            border-radius: 50%;
+            background: $btn-bg-grey;
+            padding: 20px;
+            right: -10px;
+            bottom: 40%;
+            aspect-ratio: 1/1;
+            img{
+               @include img-fluid; 
+               aspect-ratio: 1/1;           
+            }
+        } 
+    }
+}

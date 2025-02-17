@@ -1,0 +1,21 @@
+/* Container */
+.wrapper__body {
+    @include family-poppins();
+    width: 100%;
+    background: linear-gradient(90deg, $bg-gradient-one, $bg-gradient-two);
+    
+    .wrapper__body__img {
+        @include flex-justify(center);
+        width: 100%;
+        background-image: url(../assets/Group16.png);
+        background-repeat: no-repeat;
+        background-blend-mode: darken;
+        background-position: 0 0;
+
+        .container {
+            @include d-flex(column, flex-start, center);
+            max-width: 1272px;
+        }
+    }
+};
+
