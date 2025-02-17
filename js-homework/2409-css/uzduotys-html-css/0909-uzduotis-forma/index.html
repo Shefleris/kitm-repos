@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Application Form</title>
+    </head>
+    <body>
+        <Main>
+            <h1>Application Form</h1>
+            <form action="">
+                <div>
+                    <label for="first-name" >First name: </label>
+                    <input type="text" id="first-name" placeholder="Enter first name" required>
+                    <label for="last-name">Last name: </label>
+                    <input type="text" id="last-name" placeholder="Enter last name" required>
+                </div>
+                <div>
+                    <label for="date-of-birth">Date of birth: </label>
+                    <input type="date" id="date-of-birth" required>
+                    <label for="age">Age: </label>
+                    <input type="number" id="age" placeholder="Enter age">
+                </div>
+                <div>
+                    <label for="gender">Gender: </label>
+                    <select name="gender" id="gender">
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label for="email">Email Address: </label>
+                    <input type="email" id="email" placeholder="Enter email address" required>
+                </div>
+                <div>
+                    <label>Positions Available: </label>
+                    <input type="radio" id="junior-developer" name="position-available">
+                    <label for="junior-developer">Junior Developer</label>
+                    <input type="radio" id="mid-level-developer" name="position-available">
+                    <label for="mid-level-developer">Mid-level Developer</label>
+                    <input type="radio" id="senior-developer" name="position-available">
+                    <label for="senior-developer">Senior Developer</label>
+                </div>
+                <div>
+                    <label>Programming Languages: </label>
+                    <input type="checkbox" id="java">
+                    <label for="java">Java </label>
+                    <input type="checkbox" id="javascript">
+                    <label for="javascript">JavaScript</label>
+                    <input type="checkbox" id="python">
+                    <label for="python">Python</label>
+                </div>
+                <div>
+                    <label for="password">Password: </label>
+                    <input type="password" id="password">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password">
+                </div>
+                <div>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </Main>
+    </body>
+</html>

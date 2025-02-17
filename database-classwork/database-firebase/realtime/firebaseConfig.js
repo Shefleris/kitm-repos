@@ -7,13 +7,13 @@ import { getDatabase } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyD2rSxCwg-_Crgli7oqcE1BF-EmmUmzl4w",
-  authDomain: "quick-test-78f7c.firebaseapp.com",
-  databaseURL: "https://quick-test-78f7c-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "quick-test-78f7c",
-  storageBucket: "quick-test-78f7c.firebasestorage.app",
-  messagingSenderId: "733318848777",
-  appId: "1:733318848777:web:fee4bfb16335a3fb9433d8"
+  apiKey: "",
+  authDomain: "",
+  databaseURL: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase

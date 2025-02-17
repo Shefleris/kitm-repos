@@ -1,0 +1,91 @@
+* {
+    margin:0;
+    padding: 0;
+}
+
+header {
+    background-color: #039aff;
+    color: #ffffff;
+    border-radius: 0;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.floating {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+}
+
+main section article {
+    margin: 0 0 20px 0;
+}
+
+main section article:first-child {
+    max-width: 700px;
+    background-color:#35f870;
+    border: 3px solid #076925;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.citedPerson {
+    text-align: right;
+    font-size: medium;
+    font-style: italic;
+}
+
+
+main section article:last-child a {
+    font-size: 2rem;
+    font-weight: 800;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+main section article:last-child h2 {
+    font-size:0.9rem;
+}
+
+main section article:last-child {
+    max-width: 300px;
+    border: 3px solid #940909;
+    background-color: #f11b1b;
+    border-radius: 10px;
+    padding: 10px 60px;
+    text-align: center;
+    color:#ffffff;
+} 
+
+main section:last-child{
+    padding: 50px 30px;
+    background-color: #0d1b5a;
+    color: #ffffff;
+}
+
+main section:last-child p{
+    padding: 0 0 10px 0;
+}
+
+main section:last-child h2 {
+    padding: 0 0 20px 0;
+}
+
+footer {
+    background-color: rgb(0, 1, 26);
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+    padding: 20px;
+    justify-content: center;
+}
+
+footer ul a {
+    color: #0290ee;
+}
+
+footer li {
+    padding: 0 20px 0 0;
+}
