@@ -1,0 +1,128 @@
+/* Resets */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+.container {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fffdf8;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
+}
+
+main {
+  width: 100%;
+  max-width: 1400px;
+}
+main .section__category {
+  background-color: #fff7e4;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 10px;
+}
+main .section__category div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+main section div ul {
+  list-style: none;
+  background-color: #f7e8d7;
+  padding: 1rem;
+  border-radius: 15px;
+}
+main section div ul li {
+  margin: 0.5rem;
+  text-wrap: wrap;
+  line-height: 1.2rem;
+}
+
+.section__inventoryValue {
+  display: flex;
+  justify-content: center;
+}
+.section__inventoryValue table {
+  border-collapse: collapse;
+  margin: 2rem 0;
+  min-width: 300px;
+  width: 100%;
+  max-width: 500px;
+  font-size: 1rem;
+}
+.section__inventoryValue table thead {
+  border: 1px solid #000;
+  text-align: left;
+}
+.section__inventoryValue table tbody {
+  border: 1px solid #000;
+  text-align: left;
+}
+.section__inventoryValue table tfoot {
+  border: 1px solid #000;
+  text-align: left;
+}
+
+button {
+  background-color: #f7e8d7;
+  border: none;
+  border-radius: 10px;
+  padding: 0.3rem 1rem;
+  margin: 0.1rem 0;
+}
+button:hover {
+  background-color: #f7ded7;
+}
+button:active {
+  background-color: #f7e8d7;
+  box-shadow: inset 0px 5px 10px 0 rgb(66, 66, 66);
+}
+button:disabled {
+  background-color: transparent;
+  color: #292929;
+  border: 1px solid #292929;
+}
+
+select {
+  margin: 0;
+  padding: 0.5rem;
+  background-color: #f7e8d7;
+  border-radius: 10px;
+  border: none;
+}
+
+input {
+  background-color: #fff7e4;
+  border: 1px solid #f0e7d0;
+  padding: 0 1rem;
+}
+
+/*# sourceMappingURL=style.css.map */

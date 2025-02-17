@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/app.js" defer type="module"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Biblioteka</h1>
+        </header>
+        <nav>
+            <form class="form__filter">
+                <select name="category" id="form__select__category">
+                    <option value="" selected>Pasirink kategorija</option>
+                    <option value="Information technologies">Informacinės technologijos</option>
+                    <option value="Math">Matematika</option>
+                    <option value="Physics">Fizika</option>
+                    <option value="History">Istorija</option>
+                    <option value="Economics">Ekonomika</option>
+                </select>
+                <input type="text" name="title" placeholder="Įvesk pavadinima">
+                <label for="pages"></label>
+                <input type="number" name="pages" placeholder="Įvesk puslapių skaičių">
+                <button>Filtruoti</button>
+            </form>
+            <div class="nav__buttonsValue">
+                <button id="button__minPrice" value="min">Pigiausia knyga</button>
+                <button id="button__maxPrice" value="max">Brangiausia knyga</button>
+                <button id="button__calcInvValue">Apskaičiuoti inventoriaus vertę</button>
+            </div>
+            <div class="nav__sort">
+                <label for="sortBy">Rušiuoti pagal</label>
+                <select name="sortBy" id="form__select__sort">
+                    <option value="title_asc" selected>Pavadinimas A-Z</option>
+                    <option value="title_desc">Pavadinimas Z-A</option>
+                    <option value="price_asc">Kaina min-max</option>
+                    <option value="price_desc">Kaina max-min</option>
+                </select>
+            </div>
+        </nav>
+        <main>
+        </main>
+    </div>
+</body>
+</html>

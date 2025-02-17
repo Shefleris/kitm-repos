@@ -1,0 +1,25 @@
+.section__inventoryValue{ 
+    display:flex;
+    justify-content: center;
+    table{
+        border-collapse: collapse;
+        margin:2rem 0;
+        min-width: 300px;
+        width: 100%;
+        max-width: 500px;
+        font-size: 1rem;
+        thead {
+            border: 1px solid #000;
+            text-align: left;
+        }
+        tbody{
+            border: 1px solid #000;
+            text-align: left;
+        }
+        tfoot{
+            border: 1px solid #000;
+            text-align: left;
+        }
+    } 
+}
+
