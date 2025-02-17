@@ -1,0 +1,14 @@
+@use './variables.scss' as var;
+@use '../components/header/landingHeader.scss';
+@use '../components/footer/footer.scss';
+@use '../components/mealCard/mealCard.scss';
+@use '../components/navbar/navbar.scss';
+@use '../components/search/searchResults.scss';
+
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+.root {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

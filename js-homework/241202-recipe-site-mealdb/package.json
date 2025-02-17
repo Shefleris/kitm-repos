@@ -1,0 +1,32 @@
+{
+  "name": "recipe-site-using-mealdb",
+  "version": "1.0.0",
+  "description": "You are tasked with creating a **Meal Search Application** that integrates with **the MealDB API** and displays meal information based on user input. The project must follow modern front-end development standards, using **Webpack** for bundling, **JavaScript modules** for structure and reusability, and **HTML5** with semantic elements for accessibility and SEO optimization. Additionally, the app should be **responsive** to provide a great user experience on both desktop and mobile devices.",
+  "main": "webpack.config.js",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "7.26.0",
+    "@babel/preset-env": "7.26.0",
+    "babel-loader": "9.2.1",
+    "css-loader": "7.1.2",
+    "eslint": "9.15.0",
+    "eslint-webpack-plugin": "4.2.0",
+    "html-webpack-plugin": "5.6.3",
+    "mini-css-extract-plugin": "2.9.2",
+    "sass": "1.81.0",
+    "sass-loader": "16.0.3",
+    "style-loader": "4.0.0",
+    "webpack": "5.96.1",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "5.1.0"
+  },
+  "dependencies": {
+    "bootstrap": "5.3.3"
+  }
+}
