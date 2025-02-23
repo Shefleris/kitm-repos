@@ -32,7 +32,9 @@ class Studentas:
     def vidurkis(self):
         return sum(self._pazymiai)/len(self._pazymiai)
 
-studentas = Studentas("Jonas", [8, 9, 7])
-print(studentas.vardas)
-print(studentas.vidurkis())
-studentas.pazymiai = [10, 9, 11]
+
+if __name__ == '__main__':
+    studentas = Studentas("Jonas", [8, 9, 7])
+    print(studentas.vardas)
+    print(studentas.vidurkis())
+    studentas.pazymiai = [10, 9, 11]

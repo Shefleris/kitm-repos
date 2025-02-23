@@ -41,6 +41,7 @@ class Preke:
     def bendra_kaina(self):
         return self.kaina*self.kiekis
 
-preke = Preke("Obuolys", 1.2, 10)
-print(preke.bendra_kaina())
-preke.kaina = -5
+if __name__ == '__main__':
+    preke = Preke("Obuolys", 1.2, 10)
+    print(preke.bendra_kaina())
+    preke.kaina = -5
